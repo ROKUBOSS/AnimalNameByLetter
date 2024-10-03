@@ -1,0 +1,5 @@
+1-Scanf = Scan Formatted
+2-Scanf = ১টি Function যা User এর Input গ্রহণ করে। 
+3-Basic Structure
+4-Data Type (123/9.9/A,Hello)
+5-& For Address
