@@ -1,0 +1,29 @@
+
+
+Constant Variable উদাহরণ:
+
+#include <stdio.h>
+
+int main() {
+    const int number = 10;  // কনস্ট্যান্ট ভেরিয়েবল ঘোষণা করা হয়েছে
+    printf("Number এর মান: %d\n", number);
+
+    // number = 20;  // এটি ভুল হবে, কারণ const ভেরিয়েবলের মান পরিবর্তন করা যাবে না
+
+    return 0;
+}
+
+
+
+### কিছু কনস্ট্যান্ট ভেরিয়েবলের ব্যবহার:
+গাণিতিক ধ্রুবক**:
+
+   const float PI = 3.1416;  // PI এর মান পরিবর্তন করা যাবে না
+------------------------------------------------------
+
+const int a = 33;
+const float b = 3.3;
+const double c = 5.67;
+const char d = 'G';
+
+

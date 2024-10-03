@@ -1,0 +1,53 @@
+#include <stdio.h>
+
+int main() {
+
+    
+    if () 
+        {
+        printf("");
+       } 
+   
+
+    return 0;
+}
+
+----------------------------------------------------------------------
+#include <stdio.h>
+
+int main() {
+
+    
+    if () 
+        {
+        printf("");
+       } 
+    else 
+    {
+        printf("a is zero\n");
+    }
+
+    return 0;
+}
+
+----------------------------------------------------------------------
+#include <stdio.h>
+
+int main() {
+
+    
+    if () 
+        {
+        printf("a is positive\n");
+       } 
+    else if () 
+        {
+        printf("a is negative\n");
+       } 
+    else 
+    {
+        printf("a is zero\n");
+    }
+
+    return 0;
+}

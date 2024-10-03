@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ICT</title>
+<link rel="shortcut icon" href="ictfavicon.webp" type="image/x-icon">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: black;
+  color: #fff;
+}
+
+body {
+  background-image: url('Images/bgtwo.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-transform: capitalize;
+}
+
+/* Header */
+.header {
+  text-align: left;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.header img {
+  height: 200px;
+  width: 200px;
+  border-radius: 100px;
+  margin-bottom: 10px;
+  border: 3px solid #ffcc00;
+}
+
+.header h4 {
+  font-size: 28px;
+  color: #f1f1f1;
+}
+
+.header p {
+  color: #ffcc00;
+  font-size: 18px;
+}
+
+.header marquee {
+  font-size: 30px;
+  color: orange;
+  font-family: cursive;
+  margin-bottom: 15px;
+}
+
+/* Overlay */
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 90%;
+  text-align: justify;
+  margin-top: 20px;
+}
+
+.overlay a {
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #ffcc00;
+  display: block;
+  transition: 0.3s;
+  border: 1px solid #ffcc00;
+  margin: 10px 0;
+}
+
+.overlay a:hover {
+  background: #ffcc00;
+  color: #000;
+  font-weight: 700;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.overlay .closebtn:hover {
+  color: #ffcc00;
+}
+
+span {
+  font-size: 30px;
+  cursor: pointer;
+  padding: 10px 20px;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+span:hover {
+  background-color: #ffcc00;
+  color: #000;
+}
+
+/* Button Styles */
+.header button {
+  float: right;
+  text-align: center;
+  background-color: #ffcc00;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.header button:hover {
+  background-color: orange;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+  .header img {
+    height: 150px;
+    width: 150px;
+  }
+
+  .header h4 {
+    font-size: 22px;
+  }
+
+  .header p {
+    font-size: 16px;
+  }
+
+  .overlay a {
+    font-size: 18px;
+  }
+
+  .overlay .closebtn {
+    font-size: 40px;
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  .menu, .main, #slider {
+    width: 100%;
+  }
+
+  .overlay a {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 18px;
+  }
+
+  .overlay .closebtn {
+    font-size: 30px;
+  }
+}
+
+/* Image Slider */
+#slider {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  margin-top: 30px;
+  border-radius: 10px;
+}
+</style>
+</head>
+<body>
+ 
+<div class="header">
+  <marquee behavior="" direction="">Welcome To Our ICT Class 😊</marquee>
+  <img src="Images/rokibhasan.png" alt="Rokib Sir">
+  <h4><b>Rokib Sir</b></h4>
+  <p>(DU)</p>
+</div>
+
+<!-- Overlay Navigation -->
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+    <h2 style="color: aqua;">ICT (HSC)</h2>
+    <a href="Docs-File/ICT (HSC).txt" target="_blank">Note</a>
+    <a href="Demo-Class/demoClass.html" target="_blank">Demo-Class</a>
+    <a href="Chap1/home.html" target="_blank">Chapter-1</a>
+    <a href="Chap2/home.html" target="_blank">Chapter-2</a>
+    <a href="Chap3/home.html" target="_blank">Chapter-3</a>
+    <a href="Chap4/home.html" target="_blank">Chapter-4</a>
+    <a href="Chap5/home.html" target="_blank">Chapter-5</a>
+    <a href="Chap6/home.html" target="_blank">Chapter-6</a>
+    <h2>Creative Question(s)</h2>  
+    <a href="CQ_Q_A/cq.html" target="_blank">CQ Q & A</a>
+
+    <h2 style="color: bisque;">Book 👇</h2>
+    <a href="Docs-File/ictmainbook.pdf" target="_blank">ICT</a>
+  </div>
+</div>
+
+<!-- Button to Open Overlay -->
+<span onclick="openNav()">&#9776; Menu</span>
+
+<!-- Image Slider -->
+<!-- <img id="slider" name="slide" src="Images/" alt="Image Slider"> -->
+
+
+
+<!-- Image Slider Script -->
+<script>
+  var i = 0;
+  var path = ["codeone.jpg", "code1.jpg", "code2.jpg", "code3.jpg", "code4.jpg", "code5.jpg", "code6.jpg"];
+
+  function swapImage() {
+    document.getElementById("slider").src = path[i];
+    i = (i < path.length - 1) ? i + 1 : 0;
+    setTimeout(swapImage, 3000);
+  }
+
+  window.onload = swapImage;
+  
+  function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+  }
+
+  function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+  }
+</script>
+</body>
+</html>

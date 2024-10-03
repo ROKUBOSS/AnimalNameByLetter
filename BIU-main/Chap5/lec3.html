@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ICT (HSC)</title>
+<link rel="shortcut icon" href="ictfavicon.webp" type="image/x-icon">
+
+<style>
+  body {
+    background-color: black;
+    background-image: url(bgog.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  .collapsible {
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    margin: 5px 0;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+  }
+
+  .active, .collapsible:hover {
+    background-color: orange;
+  }
+
+  .collapsible:after {
+    content: '\002B';
+    color: white;
+    font-weight: bold;
+    float: right;
+  }
+
+  .active:after {
+    content: "\2212";
+  }
+
+  .content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #f1f1f1;
+  }
+
+  h3 {
+    border: 2px solid orange;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  table {
+    width: 100%;
+    margin: 20px auto;
+    border-collapse: collapse;
+  }
+
+  th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+  th {
+    background-color: #f2f2f2;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .collapsible {
+      font-size: 16px;
+      padding: 15px;
+    }
+
+    pre {
+      font-size: 14px;
+    }
+
+    table, th, td {
+      font-size: 14px;
+    }
+  }
+
+  @media only screen and (max-width: 620px) {
+    /* For mobile phones: */
+    .collapsible {
+      width: 100%;
+      font-size: 14px;
+    }
+
+    pre {
+      font-size: 12px;
+    }
+
+    table, th, td {
+      font-size: 12px;
+      padding: 5px;
+    }
+  }
+
+  /* Make the table responsive */
+  @media only screen and (max-width: 600px) {
+    table, thead, tbody, th, td, tr {
+      display: block;
+    }
+
+    thead {
+      display: none;
+    }
+
+    tr {
+      margin-bottom: 10px;
+      border-bottom: 1px solid #dddddd;
+    }
+
+    td {
+      text-align: right;
+      padding-left: 50%;
+      position: relative;
+    }
+
+    td:before {
+      content: attr(data-label);
+      position: absolute;
+      left: 0;
+      width: 45%;
+      padding-left: 15px;
+      font-weight: bold;
+      text-align: left;
+    }
+  }
+
+</style>
+</head>
+<body>
+  <button class="collapsible">C-Programming Basic Structure</button>
+  <div class="content">
+    
+    <pre>
+     <code>
+      #include &lt;stdio.h&gt;
+    
+      int main() {
+         
+          return 0;
+      }
+      <a href="Docs-File/C-progrmaAtGlance.txt" target="_blank">At a glance</a> <br>
+      টিকাঃ
+      সি প্রোগ্রামিং ভাষায় ছোট হাতের (lowercase) অক্ষর ব্যবহার করা একটি ভালো অভ্যাস বা উত্তম প্র্যাকটিস হিসেবে বিবেচিত হয়। বিশেষ করে ভেরিয়েবল নাম, ফাংশনের নাম, এবং অন্যান্য আইডেন্টিফায়ারগুলির ক্ষেত্রে ছোট হাতের অক্ষর ব্যবহার করলে কোড সহজে পড়া, বুঝা এবং রক্ষণাবেক্ষণ করা যায়।
+     </code>
+    </pre>
+  </div>
+  <button class="collapsible">Printf</button>
+  <div class="content">
+    
+    <pre>
+     <code>
+      #include &lt;stdio.h&gt;
+     
+      int main() {
+        printf("Hello World");
+        printf("Hello \n World"); //Line Break
+         
+          return 0;
+      }
+     </code>
+    </pre>
+  </div>
+  <button class="collapsible">Declaration & Initialization</button>
+  <div class="content">
+    
+    <pre>
+      <code>
+       #include &lt;stdio.h&gt;
+     
+       int main() {
+        int C;        //Declaration
+        C = 45;
+        int D = 9;    //Declaration & Initialization
+        int Y = 96;
+        char Y = 'F'; //Wrong Statement.
+        char y = 'F';
+        char y = "F"; //Wrong Statement. 
+        int product_price = 3000; //Use Camel Case, Snake Case and Pascal Case. 
+        int a,b,c;    // Declaring Multiple Variables of the Same Type.
+        char = '9';  //'9' is a character literal.
+  
+        
+          
+           return 0;
+       }
+  
+       <h5>//Single line comment example <br>
+  
+     /* This is a multi-line comment example */</h5>
+      </code>
+     </pre>
+     //Single line comment example 
+  
+      /* This is a multi-line comment example */
+     
+  </div>
+  <button class="collapsible">Format-Specifier</button>
+  <div class="content">
+    <h2 style="text-align: center;">Format Specifiers in C</h2>
+  
+  <table>
+      <tr>
+          <th>Data Type</th>
+          <th>Format Specifier</th>
+          <th>Description</th>
+      </tr>
+      <tr>
+          <td>Integer</td>
+          <td>%d</td>
+          <td>Prints an integer in decimal format.</td>
+      </tr>
+      <tr>
+          <td>Unsigned Integer</td>
+          <td>%u</td>
+          <td>Prints an unsigned integer.</td>
+      </tr>
+      <tr>
+          <td>Floating Point</td>
+          <td>%f</td>
+          <td>Prints a floating-point number.</td>
+      </tr>
+      <tr>
+          <td>Scientific Notation</td>
+          <td>%e</td>
+          <td>Prints a floating-point number in scientific notation.</td>
+      </tr>
+      <tr>
+          <td>Character</td>
+          <td>%c</td>
+          <td>Prints a single character.</td>
+      </tr>
+      <tr>
+          <td>String</td>
+          <td>%s</td>
+          <td>Prints a string of characters.</td>
+      </tr>
+      <tr>
+          <td>Octal Integer</td>
+          <td>%o</td>
+          <td>Prints an integer in octal format.</td>
+      </tr>
+      <tr>
+          <td>Hexadecimal Integer</td>
+          <td>%x / %X</td>
+          <td>Prints an integer in hexadecimal format. Use %X for uppercase letters.</td>
+      </tr>
+      <tr>
+          <td>Pointer</td>
+          <td>%p</td>
+          <td>Prints the address of a pointer.</td>
+      </tr>
+      <tr>
+          <td>Long Integer</td>
+          <td>%ld</td>
+          <td>Prints a long integer.</td>
+      </tr>
+      <tr>
+          <td>Short Integer</td>
+          <td>%hd</td>
+          <td>Prints a short integer.</td>
+      </tr>
+  </table>
+  
+    
+    <pre>
+     
+    </pre>
+  </div>
+  <button class="collapsible">Format Specifiers Example</button>
+  <div class="content">
+    
+    <pre>
+     <code>
+      #include &lt;stdio.h&gt;
+     
+      int main() {
+        printf("Hello World\n");
+        printf("Number 10+5\n");
+        printf("Number %d\n",5);
+        printf("Number %d\n",5+5);
+        printf("Number %d\n",5-3);
+        
+        printf("Number %d\n",5*5);
+        printf("Number %d\n",5/5);
+        
+        printf("Number %f\n",5 + 2.5); //Float By Default 6 Digits Value.
+        printf("Number %.2f\n",5 + 2.5); //Float By Custom.
+        printf("Number %lf\n",7 + 2.5); // Double By Default 6 Digits Value. 
+        printf("Number %.3lf\n",7 + 2.5); //Float By Custom.
+        
+        printf("Letter %c\n",M);     //Wrong Statement
+        printf("Letter %c\n", 'M');  //Right Statement
+        
+        
+        টিকা:
+        সি প্রোগ্রামিং ভাষায় ভেরিয়েবল নামের ক্ষেত্রে কোটেশন (' ' বা " ") ব্যবহার করা হয় না। তবে, যখন কোনো ভ্যালু বা মান নির্ধারণ করা হয়, তখন নির্দিষ্ট ধরনের ভ্যালুর ক্ষেত্রে কোটেশন ব্যবহার করা হয়।
+    Note:
+  In printf: %f and %lf both work for double.
+  In scanf: Use %lf for double and %f for float.
+         
+          return 0;
+      }
+     </code>
+    </pre>
+  </div>
+  <button class="collapsible">অপারেটর কাকে বলে ?</button>
+<div class="content">
+  
+  <pre>
+    সি প্রোগ্রামিংয়ে, "অপারেটর" যা কোনো গাণিতিক বা যৌক্তিক কাজ সম্পন্ন করে, যেমন যোগ, বিয়োগ, গুণ, ভাগ ইত্যাদি। উদাহরণস্বরূপ, + হলো একটি অপারেটর সাইন যা দুটি সংখ্যাকে যোগ করে।
+  </pre>
+</div>
+  <button class="collapsible">Types of Operators in C</button>
+  <div class="content">
+    
+    <pre>
+     
+      
+      <h1>Types of Operators in C</h1>
+      <table>
+          <thead>
+              <tr>
+                  <th>Category</th>
+                  <th>Symbol</th>
+                  <th>Description</th>
+                  <th>Example</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>Arithmetic Operators</td>
+                  <td>+ , - , * , / , %</td>
+                  <td>Used for basic mathematical operations: addition, subtraction, multiplication, division, and modulus.</td>
+                  <td>a + b</td>
+              </tr>
+              <tr>
+                  <td>Relational Operators</td>
+                  <td>== , != , > , < , >= , <=</td>
+                  <td>Used to compare two values. Returns true (1) or false (0).</td>
+                  <td>a > b</td>
+              </tr>
+              <tr>
+                  <td>Logical Operators</td>
+                  <td>&& , || , !</td>
+                  <td>Used for logical operations combining conditions.</td>
+                  <td>a && b</td>
+              </tr>
+              <tr>
+                  <td>Bitwise Operators</td>
+                  <td>& , | , ^ , ~ , << , >></td>
+                  <td>Operate on bits of integer values.</td>
+                  <td>a & b</td>
+              </tr>
+              <tr>
+                  <td>Assignment Operators</td>
+                  <td>= , += , -= , *= , /= , %=</td>
+                  <td>Used to assign values to variables.</td>
+                  <td>a = b</td>
+              </tr>
+              <tr>
+                  <td>Increment/Decrement Operators</td>
+                  <td>++ , --</td>
+                  <td>Used to increase or decrease a variable by 1.</td>
+                  <td>a++</td>
+              </tr>
+              <tr>
+                  <td>Ternary Operator</td>
+                  <td>?:</td>
+                  <td>A shorthand for if-else statements.</td>
+                  <td>result = (a > b) ? a : b;</td>
+              </tr>
+              <tr>
+                  <td>Sizeof Operator</td>
+                  <td>sizeof</td>
+                  <td>Returns the size (in bytes) of a variable or data type.</td>
+                  <td>sizeof(int)</td>
+              </tr>
+              <tr>
+                  <td>Pointer Operators</td>
+                  <td>* , &</td>
+                  <td>Used to work with pointers; & gets address, * dereferences.</td>
+                  <td>int *p = &a;</td>
+              </tr>
+              <tr>
+                  <td>Member Selection Operators</td>
+                  <td>. , -></td>
+                  <td>Access members of structures or unions.</td>
+                  <td>ptr->member</td>
+              </tr>
+          </tbody>
+      </table>
+    </pre>
+  </div>
+  <button class="collapsible">Arithmetic Operators</button>
+  <div class="content">
+    
+    <pre>
+    <code>
+      #include &lt;stdio.h&gt;
+
+        int main() {
+            int a = 10; // First operand
+            int b = 3;  // Second operand
+        
+            // Performing arithmetic operations
+            int sum = a + b;           // Addition
+            int difference = a - b;    // Subtraction
+            int product = a * b;       // Multiplication
+            int quotient = a / b;      // Division
+            int remainder = a % b;     // Modulus
+        
+            // Displaying the results
+            printf("Addition: %d + %d = %d\n", a, b, sum);
+            printf("Subtraction: %d - %d = %d\n", a, b, difference);
+            printf("Multiplication: %d * %d = %d\n", a, b, product);
+            printf("Division: %d / %d = %d\n", a, b, quotient);
+            printf("Modulus: %d %% %d = %d\n", a, b, remainder);
+        
+            return 0;
+        }
+        
+  
+  
+  
+  কেন C প্রোগ্রামিং-এ %% ব্যবহার হয় ?
+  
+  C প্রোগ্রামিং-এ %% ব্যবহার
+  C প্রোগ্রামিং-এ, দুইটি শতাংশ চিহ্ন (%%) printf বিবৃতিতে একটি একক শতাংশ চিহ্ন (%) প্রদর্শন করার জন্য ব্যবহৃত হয়।
+  এটি অবশিষ্টাংশ অপারেটরের সাথে সম্পর্কিত নয়, বরং printf ফাংশনের একটি ফরম্যাটিং বৈশিষ্ট্য।
+  
+  printf-এ %% ব্যবহার ব্যাখ্যা
+  যখন আপনি আউটপুটে একটি শতাংশ চিহ্ন প্রদর্শন করতে চান,
+  তখন আপনাকে এটি %% ব্যবহার করে স্কেপ করতে হয়। 
+  এটি printf-কে জানায় যে এটি একটি অক্ষর হিসেবে বিবেচিত হবে, ফরম্যাট স্পেসিফায়ারের পরিবর্তে।
+  
+    </code>
+    </pre>
+  </div>
+  <button class="collapsible">Assignment Operators</button>
+  <div class="content">
+    
+    <pre>
+     <code>
+      #include &lt;stdio.h&gt;
+  
+        int main() {
+            int a = 10; 
+            int b = 5; 
+        
+            // Using various assignment operators
+            a += b;  // a = a + b 
+            printf("After += : a = %d\n", a);
+            
+            a -= b;  // a = a - b 
+            printf("After -= : a = %d\n", a);
+            
+            a *= b;  // a = a * b
+            printf("After *= : a = %d\n", a);
+            
+            a /= b;  // a = a / b 
+            printf("After /= : a = %d\n", a);
+            
+            a %= b;  // a = a % b 
+            printf("After %%= : a = %d\n", a);
+        
+            return 0;
+        }
+        
+     </code>
+    </pre>
+  </div>
+  <button class="collapsible">Relational Operators</button>
+  <div class="content">
+    <pre>
+     <code>
+      #include &lt;stdio.h&gt;
+  
+        int main() {
+            int a = 10; 
+            int b = 20; 
+        
+            
+            printf("a == b: %d\n", a == b);
+            printf("a != b: %d\n", a != b);   
+            printf("a > b: %d\n", a > b);     
+            printf("a < b: %d\n", a < b);   
+            printf("a >= b: %d\n", a >= b);   
+            printf("a <= b: %d\n", a <= b);  
+        
+            return 0;
+        }
+      
+     </code>
+     <a href="Docs-File/RelationalOperatorExample.txt" target="_blank">Example</a>
+    </pre>
+    
+  </div>
+  <button class="collapsible">Logical Operators</button>
+  <div class="content">
+    
+    <pre>
+     <code>
+      
+      #include &lt;stdio.h&gt;
+        int main() {
+            int a = 1; // true (1)
+            int b = 0; // false (0)
+        
+           
+            printf("a && b: %d\n", a && b);   // Logical AND
+            printf("a || b: %d\n", a || b);   // Logical OR
+            printf("!a: %d\n", !a);           // Logical NOT
+            printf("!b: %d\n", !b);           // Logical NOT
+        
+            return 0;
+        }
+
+        টিকাঃ ১ যেমন True তেমনি যেকোনো Positive Number True.
+        Example: int a = 5;
+        
+        <a href="Docs-File/LogicalOperatorExample.txt" target="_blank">Example-1</a><br>
+        <a href="Docs-File/LogicalOperatorExample2.txt" target="_blank">Example-2</a>
+  
+     </code>
+    </pre>
+  </div>
+  <button class="collapsible">Bitwise Operators</button>
+  <div class="content">
+    
+    <pre>
+     <code>
+      Bitwise OR operation
+  
+  
+          #include &lt;stdio.h&gt;
+              int main() {
+                  int a = 6;  // 6 in binary is 0110
+                  int b = 3;  // 3 in binary is 0011
+                  
+                  int result = a | b;  // Bitwise OR operation
+              
+                  printf("Result of a | b = %d\n", result);  // Should output 7 (0111 in binary)
+                  
+                  return 0;
+              }
+              
+      
+     
+      
+          
+  Bitwise AND operation
+  
+          #include &lt;stdio.h&gt;
+              int main() {
+                  int a = 5;  // 5 in binary is 0101
+                  int b = 3;  // 3 in binary is 0011
+                  
+                  int result = a & b;  // Bitwise AND operation
+              
+                  printf("Result of a & b = %d\n", result);  // Should output 1 (0001 in binary)
+                  
+                  return 0;
+              }
+              কেন ৩ বিট ব্যবহার করা হয়নি?
+              যদি আমরা ৩ বিট ব্যবহার করি, তাহলে কোনো সংখ্যা ৮ এর  বেশি হলে তার বাইনারি রূপ ঠিকভাবে দেখানো যাবে না।
+              কিন্তু আমরা ৮ এর চেয়ে বড় সংখ্যা সহজেই ৪ বিটে প্রকাশ করতে পারি। 
+
+              ***স্ট্যান্ডার্ডাইজেশন (মানকীকরণ):***
+              কম্পিউটিংয়ে, ডেটা স্টোরেজ এবং প্রসেসিংয়ের জন্য বিটের স্ট্যান্ডার্ড আকার রয়েছে, যেমন ৮-বিট, ১৬-বিট, ৩২-বিট ইত্যাদি। এর ফলে কম্পিউটারের জন্য ডেটা হ্যান্ডল করা সহজ হয় এবং প্রসেসরের পারফরম্যান্সও উন্নত হয়। যদি প্রতিটি সংখ্যার জন্য ভিন্ন ভিন্ন বিটসাইজ ব্যবহার করা হতো, তাহলে প্রসেসরের জন্য ডেটা ম্যানেজ করা জটিল হয়ে যেতো।
+     
+     </code>
+    </pre>
+    <a href="Docs-File/BitwiseOperatorExample.txt" target="_blank">Example</a> <br><br><br>
+    <a href="Docs-File/MixedPractise.txt" target="_blank">Example</a> <br><br><br>
+  </div>
+  <button class="collapsible">Ternary Operator</button>
+  <div class="content">
+    
+    <pre>
+     <code>
+      #include &lt;stdio.h&gt;
+  
+        int main() {
+            int a = 10;
+            int b = 20;
+        
+            // Using the ternary operator to find the maximum value
+            int max = (a > b) ? a : b;
+        
+            printf("The maximum value is: %d\n", max);
+        
+           
+        
+            return 0;
+        }
+        
+  
+     </code>
+    </pre>
+  </div>
+  <button class="collapsible">Increment and Decrement Operators</button>
+<div class="content"> 
+  
+  <pre>
+    C প্রোগ্রামিংয়ে ++A এবং A++ হল দুটি ইনক্রিমেন্ট অপারেটর।
+
+    ++A (প্রিফিক্স ইনক্রিমেন্ট): A-এর মান 1 বাড়ায়, এবং তারপর নতুন মান ফেরত দেয়।
+    A++ (পোস্টফিক্স ইনক্রিমেন্ট): বর্তমান A-এর মান ফেরত দেয়, পরে A-এর মান 1 বাড়ায়।
+    
+   <code>
+    #include &lt;stdio.h&gt;
+    
+      int main() {
+          int A = 5;
+          int B = ++A; // এখানে A-এর মান 1 বাড়বে, B হবে 6, A হবে 6
+          printf("B = %d, A = %d\n", B, A);
+      
+          int C = A++; // এখানে C হবে 6 (কারণ A এর পুরানো মান), তারপর A হবে 7
+          printf("C = %d, A = %d\n", C, A);
+      
+          return 0;
+      }
+      
+
+      //আউটপুট:
+    
+      B = 6, A = 6
+      C = 6, A = 7
+   </code>
+    
+    
+    
+    
+   
+  </pre>
+</div>
+  
+<button class="collapsible">Condition In C</button>
+<div class="content">
+  <a href="Docs-File/ConditionStructure.txt" target="_blank">Basic Structure</a>
+  <pre>
+   <code>
+    #include <stdio.h>
+
+      int main() {
+         int a = 0;
+          if (a > 0) {
+              printf("a is positive\n");
+          } else if (a < 0) {
+              printf("a is negative\n");
+          } else {
+              printf("a is zero\n");
+          }
+      
+          return 0;
+      }
+      <hr>
+    #include &lt;stdio.h&gt;
+
+      int main() {
+          int a = -3;
+          if (a > 0) {
+              printf("a is positive\n");
+          } else {
+              printf("a is not positive\n");
+          }
+      
+          return 0;
+      }
+      
+    
+     <hr>
+
+ #include &lt;stdio.h&gt;
+
+  int main() {
+      if ((5 > 3) && (2 > 3))
+          printf("My Hero");
+      else {
+          printf("My Zero");
+      }
+  
+      return 0;
+  }
+   <hr>  
+    #include &lt;stdio.h&gt;
+
+      int main() {
+         int day = 3;
+          switch (day) {
+              case 1:
+                  printf("Monday\n");
+                  break;
+              case 2:
+                  printf("Tuesday\n");
+                  break;
+              case 3:
+                  printf("Wednesday\n");
+                  break;
+              default:
+                  printf("Invalid day\n");
+          }
+      
+          return 0;
+      }
+      
+    <hr>
+    /* if (condition1) {
+      Code to execute if condition1 is true
+ } else if (condition2) {
+      Code to execute if condition2 is true
+ } else {
+      Code to execute if none of the above conditions are true
+ }*/
+    
+   </code>
+  </pre>
+</div>
+<button class="collapsible">Using Only If</button>
+<div class="content">
+  
+  <pre>
+   <code>
+    #include  &lt;stdio.h&gt;
+
+      int main() {
+          int number = 15;
+      
+          // First condition
+          if (number > 0) {
+              printf("The number is positive.\n");
+          }
+      
+          // Second condition
+          if (number < 0) {
+              printf("The number is negative.\n");
+          }
+      
+          // Third condition
+          if (number == 0) {
+              printf("The number is zero.\n");
+          }
+      
+          return 0;
+      }
+      
+   </code>
+/// শুধুমাত্র if ব্যবহার করার মূল সমস্যা সংক্ষেপে:
+
+স্বাধীন শর্ত: সব if শর্ত স্বাধীনভাবে পরীক্ষা করা হয়, ফলে একাধিক শর্ত সত্য হলে সব শর্তের ফলাফল দেখা যায়।
+
+প্রাধান্য নির্ধারণের অভাব: else if ব্যবহার না করলে, প্রাধান্য বা একাধিক শর্তের মধ্যে সম্পর্ক স্থাপন করা কঠিন হয়।
+
+কোডের অস্পষ্টতা: কোডটি অগঠিত বা অস্পষ্ট হতে পারে, যা বোঝার জন্য আরও কঠিন করে তোলে।
+  </pre>
+</div>
+
+
+<!-- <button class="collapsible"></button>
+<div class="content">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div> -->
+
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ICT (HSC)</title>
+<link rel="shortcut icon" href="ictfavicon.webp" type="image/x-icon">
+
+<style>
+  body {
+    background-color: black;
+    background-image: url(bgog.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  .collapsible {
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    margin: 5px 0;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+  }
+
+  .active, .collapsible:hover {
+    background-color: orange;
+  }
+
+  .collapsible:after {
+    content: '\002B';
+    color: white;
+    font-weight: bold;
+    float: right;
+  }
+
+  .active:after {
+    content: "\2212";
+  }
+
+  .content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #f1f1f1;
+  }
+
+  h3 {
+    border: 2px solid orange;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  table {
+    width: 100%;
+    margin: 20px auto;
+    border-collapse: collapse;
+  }
+
+  th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+  th {
+    background-color: #f2f2f2;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .collapsible {
+      font-size: 16px;
+      padding: 15px;
+    }
+
+    pre {
+      font-size: 14px;
+    }
+
+    table, th, td {
+      font-size: 14px;
+    }
+  }
+
+  @media only screen and (max-width: 620px) {
+    /* For mobile phones: */
+    .collapsible {
+      width: 100%;
+      font-size: 14px;
+    }
+
+    pre {
+      font-size: 12px;
+    }
+
+    table, th, td {
+      font-size: 12px;
+      padding: 5px;
+    }
+  }
+
+  /* Make the table responsive */
+  @media only screen and (max-width: 600px) {
+    table, thead, tbody, th, td, tr {
+      display: block;
+    }
+
+    thead {
+      display: none;
+    }
+
+    tr {
+      margin-bottom: 10px;
+      border-bottom: 1px solid #dddddd;
+    }
+
+    td {
+      text-align: right;
+      padding-left: 50%;
+      position: relative;
+    }
+
+    td:before {
+      content: attr(data-label);
+      position: absolute;
+      left: 0;
+      width: 45%;
+      padding-left: 15px;
+      font-weight: bold;
+      text-align: left;
+    }
+  }
+
+</style>
+</head>
+<body>
+  <button class="collapsible">HTML Structure</button>
+<div class="content">
+  <pre>
+   <button><a href="Docs-File/BasicStructure.txt" target="_blank" style="text-decoration: none;">HTML Structure</a></button>
+  </pre>
+</div>
+<button class="collapsible">Tags (Short & Full Form)</button>
+<div class="content">
+  <pre>
+    p        = Paragraph
+    h1       = Heading 1
+    h2       = Heading 2
+    h3       = Heading 3
+    h4       = Heading 4
+    h5       = Heading 5
+    h6       = Heading 6
+    b        = Bold
+    i        = Italic
+    u        = Underline
+    button   = Button
+    ol       = Ordered List
+    ul       = Unordered List
+    li       = List Item
+    sub      = Subscript
+    sup      = Superscript
+    pre      = Preformatted Text
+    mark     = Marked Text
+    del      = Deleted Text
+    table    = Table
+    tr       = Table Row
+    th       = Table Header
+    td       = Table Data
+    div      = Division <br>
+    marquee  = Marquee
+    a        = Anchor <br>
+    
+    img= Image
+    br = Line Break
+    hr = Horizontal Rule
+  </pre>
+</div>
+<button class="collapsible">Tags Types</button>
+<div class="content">
+  <pre>
+    <li>Container-Tag / Paired-Tag </li>
+    <li>Empty Tag / Self-Closing Tag </li> <hr>
+  </pre>
+</div>
+<button class="collapsible">Ol & Ul</button>
+<div class="content">
+  <pre>
+   <ol type="1">
+    <li>Bangla</li>
+    <li>English</li>
+    <li>ICT</li>
+   </ol>
+   <ol type="a">
+    <li>Bangla</li>
+    <li>English</li>
+    <li>ICT</li>
+   </ol>
+   <ol type="A">
+    <li>Bangla</li>
+    <li>English</li>
+    <li>ICT</li>
+   </ol>
+   <ol type="i">
+    <li>Bangla</li>
+    <li>English</li>
+    <li>ICT</li>
+   </ol>
+   <ol type="I">
+    <li>Bangla</li>
+    <li>English</li>
+    <li>ICT</li>
+   </ol><hr>
+   <ol start="9">
+    <li>Bangla</li>
+    <li>English</li>
+    <li>ICT</li>
+   </ol><hr>
+    
+    <ul type="circle">
+      <li>Cricket</li>
+      <li>Football</li>
+      <li>Carrom</li>
+    </ul>
+    <ul type="square">
+      <li>Cricket</li>
+      <li>Football</li>
+      <li>Carrom</li>
+    </ul>
+    <ul type="disc">
+      <li>Cricket</li>
+      <li>Football</li>
+      <li>Carrom</li>
+    </ul>
+    <ul type="none">
+      <li>Cricket</li>
+      <li>Football</li>
+      <li>Carrom</li>
+    </ul>
+  </pre>
+</div>
+<button class="collapsible">?</button>
+<div class="content">
+  <pre>
+   
+  </pre>
+</div>
+<button class="collapsible">?</button>
+<div class="content">
+  <pre>
+   
+  </pre>
+</div>
+<button class="collapsible">?</button>
+<div class="content">
+  <pre>
+   
+  </pre>
+</div>
+<button class="collapsible">?</button>
+<div class="content">
+  <pre>
+   
+  </pre>
+</div>
+<button class="collapsible">?</button>
+<div class="content">
+  <pre>
+   
+  </pre>
+</div>
+<button class="collapsible">?</button>
+<div class="content">
+  <pre>
+   
+  </pre>
+</div>
+
+<!-- <button class="collapsible"></button>
+<div class="content">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div> -->
+
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+
+</body>
+</html>

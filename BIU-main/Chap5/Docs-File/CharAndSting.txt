@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    char roku[11] = "He";
+    printf("Show %s \n",roku);
+    int number = 5;
+
+    if (number > 10) {
+        printf("The number is greater than 10.\n");
+    } else if (number > 5) {
+        printf("The number is greater than 5 but less than or equal to 10.\n");
+    } else {
+        printf("The number is 5 or less.\n");
+    }
+
+    return 0;
+}

@@ -1,0 +1,8 @@
+***Lecture-6***
+1-Start Attribute
+2-Entity
+3-Common Property
+4-Common Attribute
+5-Img / Audio / Video Tag
+6-How To Write Code On Textbook
+7-

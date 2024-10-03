@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    int year;
+
+    int a = 5;
+    int b = 6;
+    int c = (a && b)+(a | b);
+  //int c = (a || b)+(a | b);
+    printf("%d",c);
+  //  printf("%d",c);
+
+
+
+
+    return 0;
+}

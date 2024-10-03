@@ -1,0 +1,57 @@
+***Short Form***
+HTML = Hyper Text Markup Language
+HTTP = Hyper Text Transfer Protocol
+URL = 
+IP Address = Internet Protocol Address
+Src = Source
+FTP = File Transfer Protocol
+Href = Hyper Reference
+Img = Image
+Pre = Preformatted Text
+CSS = Cascading Style Sheet
+ 
+
+***HTML Basic Structure***
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+
+***Input Tag > Type Attribute > values
+Text (Default)
+Email
+Password
+Tel
+Time
+Date
+Datetime-Local
+Week
+Month
+Color
+File
+Range
+Radio
+Checkbox
+Search
+Button
+URL
+Reset
+Submit
+Image
+Hidden
+
+ ***How to us Audio Tag?
+    <audio src="" controls></audio>
+ ***How to us Video Tag?
+    <video src="" controls></video>
+ ***Target Attribute Use
+   <a href="" target="_blank"></a>
+
+  

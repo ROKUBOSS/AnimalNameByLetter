@@ -1,0 +1,56 @@
+
+
+Overview of C Programming
+
+1. **Introduction**
+- Language Type: C is a high-level, general-purpose programming language.
+- Developed By: Dennis Ritchie at Bell Labs in the early 1970s.
+- Use Cases: System programming, embedded systems, application development, and game development.
+
+2. **Key Features**
+- Portability: C code can be compiled on various platforms with minimal modifications.
+- Efficiency: Low-level access to memory and system resources makes C suitable for performance-critical applications.
+- Modularity: Supports functions, allowing code to be organized into reusable blocks.
+- Rich Library: Provides a standard library with various built-in functions for handling tasks like input/output and string manipulation.
+
+3. **Basic Structure of a C Program**
+c
+#include <stdio.h>  // Preprocessor directive
+
+int main() {       // Main function - entry point
+    printf("Hello, World!\n");  // Print statement
+    return 0;     // Return statement
+}
+
+4. **Data Types**
+- Basic Data Types: `int`, `char`, `float`, `double`.
+- Derived Data Types: Arrays, pointers, structures, unions.
+- Enumeration: Defines a variable that can hold a set of predefined constants.
+
+5. **Control Structures**
+- Conditional Statements: `if`, `else if`, `else`, `switch`.
+- Loops: `for`, `while`, `do while`.
+- Jump Statements: `break`, `continue`, `return`, `goto`.
+
+6. **Functions**
+- Definition: A block of code that performs a specific task.
+- Function Declaration: Specifies the function’s name, return type, and parameters.
+- Function Call: Executes the function.
+
+7. **Pointers**
+- Variables that store memory addresses, enabling direct memory access and manipulation.
+- Useful for dynamic memory allocation, arrays, and data structures.
+
+8. **Input/Output**
+- Standard I/O Functions: 
+  - `printf()` for output.
+  - `scanf()` for input.
+
+9. **Memory Management**
+- Dynamic Memory Allocation: Use functions like `malloc()`, `calloc()`, `realloc()`, and `free()` to manage memory during runtime.
+
+10. **File Handling**
+- Opening, reading, writing, and closing files using standard library functions (`fopen()`, `fclose()`, `fread()`, `fwrite()`, etc.).
+
+Conclusion
+C programming is foundational for understanding computer science and software development. Its efficiency, flexibility, and control over system resources make it a popular choice for many applications, from operating systems to embedded systems. By mastering C, you gain a deeper understanding of programming concepts that are applicable across many languages.

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ICT (HSC)</title>
+<link rel="shortcut icon" href="ictfavicon.webp" type="image/x-icon">
+
+<style>
+  body{
+  background-image:url(bgtwo.jpg) ;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-transform: capitalize;
+
+}
+.collapsible {
+  background-color: brown;
+  color: white;
+  cursor: pointer;
+  margin: 1px;
+  padding: 18px;
+  width: 100%;
+  border: 1px solid gold;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: orange;
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+}
+h1{
+  color: gold;
+  border-bottom: 7px groove darkblue;
+}
+h3{
+  border: 2px solid orange;
+  padding: 10px;
+  border-radius: 10px;
+  
+  
+
+}
+.hide{
+  display: none;
+}
+h3:hover .hide{
+  display: block;
+  padding-top: 5px;
+}
+
+
+</style>
+</head>
+<body>
+
+<h1>Today's Topic</h1>
+
+<img src="ictindex.png" style="width:100%;">
+
+
+
+<button class="collapsible">Number System (সংখ্যা পদ্ধতি) কাকে বলে?</button>
+<div class="content">
+  <p>যে পদ্ধতি দ্বারা কোন সংখ্যা গণনা বা প্রকাশ করা যায় তাকে সংখ্যা পদ্ধতি বলা হয়।</p>
+</div>
+<button class="collapsible">Number System (সংখ্যা পদ্ধতি) কত প্রকার ও কি কি ?</button>
+<div class="content">
+  <p>
+    Number System (সংখ্যা পদ্ধতি) ২ প্রকার-  <br><br>
+
+    ১। Positional Number System     (স্থানিক সংখ্যা পদ্ধতি)  <br>
+    ২। Non-positional Number System (অস্থানিক সংখ্যা পদ্ধতি) 
+
+    <center>
+      <img src="posi.png" alt="">
+    </center>
+  </p>
+</div>
+<button class="collapsible">Positional Number System (স্থানিক সংখ্যা পদ্ধতি) কাকে বলে ও কি কি ?</button>
+<div class="content">
+  যে সকল সংখ্যা গুলোর স্থানীয় মান আছে এবং স্থান পরিবর্তন করলে মান পরিবর্তন হয় তাদেরকে পজিশনাল সংখ্যা পদ্ধতি বলে। <br><br>
+  <center>
+    <img src="nmbr.jpg" alt="">
+  </center>
+</div>
+<button class="collapsible">Non-positional Number System (অস্থানিক সংখ্যা পদ্ধতি) কাকে বলে? </button>
+<div class="content">
+  <p>যে সংখ্যা পদ্ধতিতে সংখ্যার কোন স্থানীয় মান নেই। এবং অবস্থানের ভিক্তিতে ঐ সংখ্যার মানের কোন পরিবর্তন হয়না তাকে নন-পজিশনাল সংখ্যা বলে।</p>
+</div>
+<button class="collapsible">Base (ভিত্তি) কাকে বলে?</button>
+<div class="content">
+  <p>সংখ্যা পদ্ধতিতে ব্যবহৃত মৌলিক চিহ্নসমূহের মোট সংখ্যাকে বেস বা ভিত্তি বলা হয়। </p>
+</div>
+<button class="collapsible">স্থানীয় মান কাকে বলে?</button>
+<div class="content">
+  <p>সংখ্যায় ব্যবহৃত কোনো অঙ্ক তার অবস্থানের জন্য যে সংখ্যা প্রকাশ করে থাকে তাকে স্থানীয় মান বলা হয়।</p>
+</div>
+<button class="collapsible">ডিজিট (Digit) বা অংক কাকে বলে ?</button>
+<div class="content">
+  <p>কোনো সংখ্যা লিখে প্রকাশ করার জন্য যেসব সাংকেতিক চিহ্ন বা মৌলিক চিহ্ন ব্যবহার করা হয় তাকে অঙ্ক বলে। <br> সংখ্যা তৈরির ক্ষুদ্রতম প্রতীকই হচ্ছে অঙ্ক।</p>
+</div>
+<button class="collapsible">Radix Point (রেডিক্স পয়েন্ট) কাকে বলে ?</button>
+<div class="content">
+  <p>পজিশনাল সংখ্যা পদ্ধতিতে প্রতিটি সংখ্যাকে যে ডট (.) বা চিহ্ন দ্বারা পূর্ণাংশ (Integer) ও ভগ্নাংশ (Fraction) এ দুই অংশে ভাগ করা হয় তাকে Radix পয়েন্ট বলে।</p>
+</div>
+<button class="collapsible">LSB & MSB পূর্ণরূপ কী ?</button>
+<div class="content">
+  LSB- এর পূর্ণরূপ Least significant bit <br><br>
+  MSB-এর পূর্ণরূপ Most significant bit.
+</div>
+<button class="collapsible">Number System Addition (সংখ্যা পদ্ধতির যোগ)</button>
+<div class="content">
+  <pre>
+    <li>Binary       = 2 </li>
+    <li>Octal        = 8</li>
+    <li>Decimal      = 10</li>
+    <li>Hexa-Decimal = 16</li>
+    </pre>
+    <input type="radio" name="" id="">যে কোন সংখ্যা পদ্ধতিতে যোগ, বিয়োগ, গুন, ভাগ করার সময় সংখ্যা পদ্ধতির <b>ভিত্তি(Base)</b> অনেক গুরুত্বপূর্ণ। <br><br>
+<input type="radio" name="" id="">যোগফল যদি ভিত্তির সমান / বেশি (>=) হয়, তবে ভিত্তির সাথে বিয়োগ করতে হবে।<br><br>
+<input type="radio" name="" id="">যতবার বিয়োগ হবে বামে যোগ হবে। অর্থাৎ একবার বিয়োগ হলে বামে ১ যোগ হবে, দুইবার বিয়োগ হলে বামে ২ যোগ হবে।<br><br><br>
+<input type="radio" name="" id="">এক সংখ্যা পদ্ধতি থেকে অন্য সংখ্যা পদ্ধতি কে যোগ, বিয়োগ করা যায় না। (করতে চাইলে যে কোনো এক পদ্ধতিতে Convert করতে হবে।) <br><br><br>
+<pre>
+  <button>Hexa-Decimal Value</button>
+  A = 10 <br>
+  B = 11 <br>
+  C = 12 <br>
+  D = 13 <br>
+  E = 14 <br>
+  F = 15
+  </pre>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+
+</body>
+</html>

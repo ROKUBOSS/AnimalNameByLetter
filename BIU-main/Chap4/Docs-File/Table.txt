@@ -1,0 +1,17 @@
+***All Tags For Table***
+Table = Table
+Caption = Table
+Tr = Table Row
+Th = Table Header
+Td = Table Data
+Thead = Table Head
+Tbody = Table Body
+Tfoot = Table Footer
+
+***Common Attribute For Table**
+Border
+Align
+Cellspacing
+Colspan
+Rowspan
+

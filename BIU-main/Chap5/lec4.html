@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ICT (HSC)</title>
+<link rel="shortcut icon" href="ictfavicon.webp" type="image/x-icon">
+
+<style>
+ body {
+    background-color: black;
+    background-image: url(bgog.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  .collapsible {
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    margin: 5px 0;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+  }
+
+  .active, .collapsible:hover {
+    background-color: orange;
+  }
+
+  .collapsible:after {
+    content: '\002B';
+    color: white;
+    font-weight: bold;
+    float: right;
+  }
+
+  .active:after {
+    content: "\2212";
+  }
+
+  .content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #f1f1f1;
+  }
+
+  h3 {
+    border: 2px solid orange;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  table {
+    width: 100%;
+    margin: 20px auto;
+    border-collapse: collapse;
+  }
+
+  th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+  th {
+    background-color: #f2f2f2;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .collapsible {
+      font-size: 16px;
+      padding: 15px;
+    }
+
+    pre {
+      font-size: 14px;
+    }
+
+    table, th, td {
+      font-size: 14px;
+    }
+  }
+
+  @media only screen and (max-width: 620px) {
+    /* For mobile phones: */
+    .collapsible {
+      width: 100%;
+      font-size: 14px;
+    }
+
+    pre {
+      font-size: 12px;
+    }
+
+    table, th, td {
+      font-size: 12px;
+      padding: 5px;
+    }
+  }
+
+  /* Make the table responsive */
+  @media only screen and (max-width: 600px) {
+    table, thead, tbody, th, td, tr {
+      display: block;
+    }
+
+    thead {
+      display: none;
+    }
+
+    tr {
+      margin-bottom: 10px;
+      border-bottom: 1px solid #dddddd;
+    }
+
+    td {
+      text-align: right;
+      padding-left: 50%;
+      position: relative;
+    }
+
+    td:before {
+      content: attr(data-label);
+      position: absolute;
+      left: 0;
+      width: 45%;
+      padding-left: 15px;
+      font-weight: bold;
+      text-align: left;
+    }
+  }
+
+
+</style>
+</head>
+<body>
+  <button class="collapsible">Today ?</button>
+  <div class="content">
+    
+    <pre>
+      <li>Assignment Operator</li>
+      <li>Uninitialized Variables </li>
+      <li>Address Of Variable</li>
+      <li>Condition</li>
+      <li>Scanf</li>
+     
+    </pre>
+  </div>
+  <button class="collapsible">Uninitialized Variables ?</button>
+  <div class="content">
+    
+    <pre>
+     <code>
+      #include &lt;stdio.h&gt;
+
+        int main() {
+           int a;
+        
+           printf("%d\n", a);
+        
+           return 0;
+        }
+        
+     </code>
+    </pre>
+  </div>
+  <button class="collapsible">Address of a Variable</button>
+  <div class="content">
+    
+    <pre>
+     <code>
+      #include &lt;stdio.h&gt;
+
+        int main() {
+           int a=99;
+        
+          printf("%d\n",&a);
+        
+        
+            return 0;
+        }
+     </code>
+    </pre>
+  </div>
+  <button class="collapsible">Odd / Even Number বের করার নিয়ম? </button>
+  <div class="content">
+    
+    <pre>
+      একটি সংখ্যা যদি দুই দিয়ে ভাগ করার পর ভাগশেষ শুন্য (০) হয়, তবে সেটি জোড় সংখ্যা (Even Number) এবং যদি ভাগশেষ শুন্য না হয় (১) তবে সেটি বিয়োগ সংখ্যা (Odd Number)।
+    </pre>
+  </div>
+  
+  <button class="collapsible">Pow Function (Power Function)</button>
+<div class="content">
+  
+  <pre>
+   <code>
+
+
+    //double pow(double base, double exponent);
+
+    #include &lt;stdio.h&gt;
+
+      int main() {
+          int base = pow(2,3);
+      
+      
+          printf("%d\n", base);
+      
+          return 0;
+      }
+      
+   </code>
+  </pre>
+</div>
+<button class="collapsible">Scanf  (Scan Formatted) </button>
+<div class="content">
+ <pre>
+    <code>
+      #include &lt;stdio.h&gt;
+
+        int main() {
+            // Conditional structure
+            int a;
+            scanf("%d", &a);
+            if (a < 4) {
+                printf("I am Purnota\n");
+            } else if (a < 2) {
+                printf("I am Raisa\n");
+            } else if (a == 5) {
+                printf("I am Mahi\n");
+            } else {
+                printf("I am Simi\n");
+            }
+        
+            return 0;
+        }
+<hr>        
+      #include &lt;stdio.h&gt;
+
+        int main() {
+            printf("My name is Moon\n");
+        
+            printf("What is your name?\n");
+            char name[100]; // Declare a character array to hold the name
+            scanf("%s", name); // Use %s to read a string
+            printf("Hello, %s!\n", name); // Print a greeting with the name
+        
+            return 0;
+        }
+        <hr>
+      #include &lt;stdio.h&gt;
+
+        int main() {
+            int a;
+            scanf("%d", &a);
+            printf("%d",a);
+        
+        
+        
+            return 0;
+        }
+        
+
+     <hr>
+     #include &lt;stdio.h&gt;
+ 
+       int main() {
+           // Declare an integer variable
+           int num;
+       
+           // Prompt the user for input
+           printf("Enter an integer: ");
+       
+           // Read the input integer and store it in the variable 'num'
+           scanf("%d", &num);
+       
+           // Output the entered integer
+           printf("You entered: %d\n", num);
+       
+           return 0;
+       }
+       
+    </code>
+   </pre>
+</div>
+
+<button class="collapsible">Practise</button>
+<div class="content">
+  
+  <pre>
+   <a href="Docs-File/AdditionByScanF.txt" target="montu">Addition</a><br><br>
+   <a href="Docs-File/LargeNumber.txt" target="montu">Large Number</a><br><br>
+   <a href="Docs-File/OddEvenNumber.txt" target="montu">Odd / Even</a><br><br>
+   <a href="Docs-File/Hour.txt" target="montu">Hour / Minute / second</a><br><br>
+   <a href="Docs-File/CelsiusFahrenheit.txt" target="montu">Celsius & Fahrenheit</a><br><br>
+   <a href="Docs-File/LeapYear.txt" target="montu">Leap Year</a><br><br>
+
+   <iframe src="" frameborder="none" name="montu" height="700px" width="100%"></iframe>
+   
+  </pre>
+</div>
+<button class="collapsible">Loop In C</button>
+<div class="content">
+  
+  <pre>
+   <code>
+    //Loop Example
+    //Loop Types = For/While/Do While
+    /*for (int i = 0; i < 5; i++) {
+            printf("i = %d\n", i);
+        }*/
+    
+   </code>
+  </pre>
+</div>
+
+<!-- <button class="collapsible"></button>
+<div class="content">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div> -->
+
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+
+</body>
+</html>

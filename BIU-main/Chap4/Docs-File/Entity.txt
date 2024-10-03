@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    &lt;p&gt;Hello Sir &lt;&#47;p&gt;
+
+    <h1>"Entities" বা "এন্টিটি" বলতে কি বুঝ ?</h1>
+    <p>"Entities" বা "এন্টিটি" একটি প্রোগ্রামিং বা ওয়েব ডেভেলপমেন্টের শব্দ, যা সাধারণত এমন একটি বিশেষ চিহ্ন বা ক্যারেক্টারকে বোঝাতে ব্যবহৃত হয় যা সাধারণত সরাসরি HTML কোডে লেখা যায় না বা যার একটি নির্দিষ্ট অর্থ থাকে।</p>
+</body>
+</html>
