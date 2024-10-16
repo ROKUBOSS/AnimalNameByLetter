@@ -6,1193 +6,893 @@
 <link rel="shortcut icon" href="ictfavicon.webp" type="image/x-icon">
 
 <style>
-  body{
-  background-color: black;
-  
-  
+ body {
+    background-color: black;
+    background-image: url(Images&Video/bgog.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
   }
-  body{
-  background-image:url(bgog.jpg) ;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  
-}
-.collapsible {
-  background-color: transparent;
-  color: white;
-  cursor: pointer;
-  margin: 1px;
-  padding: 18px;
-  width: 100%;
-  /* border: 1px solid gold; */
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-}
 
-.active, .collapsible:hover {
-  background-color: orange;
-}
-
-.collapsible:after {
-  content: '\002B';
-  color: white;
-  font-weight: bold;
-  float: right;
-  margin-left: 5px;
-}
-
-.active:after {
-  content: "\2212";
-}
-
-.content {
-  padding: 0 18px;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-  background-color: #f1f1f1;
-}
-
-h3{
-  border: 2px solid orange;
-  padding: 10px;
-  border-radius: 10px;
-  
-  
-
-}
-.hide{
-  display: none;
-}
-h3:hover .hide{
-  display: block;
-  padding-top: 5px;
-  text-align: left;
-}
-pre {
-            white-space: pre-wrap; /* Enable word wrap */
-            word-wrap: break-word;  /* Break long words */
-            overflow-wrap: break-word; /* Handle word breaking */
-            font-size: 30px;
-        }
-        table {
-            width: 60%;
-            margin: 20px auto;
-            border-collapse: collapse;
-        }
-        th, td {
-            border: 1px solid #dddddd;
-            text-align: left;
-            padding: 8px;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-@media only screen and (max-width: 620px) {
-  /* For mobile phones: */
-  .menu, .main, #slider {
-    width: 100%;
-  }
-}
-@media screen and (max-height: 450px),(max-width: 600px) {
   .collapsible {
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    margin: 5px 0;
+    padding: 18px;
     width: 100%;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
   }
-  
-}
+
+  .active, .collapsible:hover {
+    background-color: orange;
+  }
+
+  .collapsible:after {
+    content: '\002B';
+    color: white;
+    font-weight: bold;
+    float: right;
+  }
+
+  .active:after {
+    content: "\2212";
+  }
+
+  .content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #f1f1f1;
+  }
+
+  h3 {
+    border: 2px solid orange;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  table {
+    width: 100%;
+    margin: 20px auto;
+    border-collapse: collapse;
+  }
+
+  th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+  th {
+    background-color: #f2f2f2;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .collapsible {
+      font-size: 16px;
+      padding: 15px;
+    }
+
+    pre {
+      font-size: 14px;
+    }
+
+    table, th, td {
+      font-size: 14px;
+    }
+  }
+
+  @media only screen and (max-width: 620px) {
+    /* For mobile phones: */
+    .collapsible {
+      width: 100%;
+      font-size: 14px;
+    }
+
+    pre {
+      font-size: 12px;
+    }
+
+    table, th, td {
+      font-size: 12px;
+      padding: 5px;
+    }
+  }
+
+  /* Make the table responsive */
+  @media only screen and (max-width: 600px) {
+    table, thead, tbody, th, td, tr {
+      display: block;
+    }
+
+    thead {
+      display: none;
+    }
+
+    tr {
+      margin-bottom: 10px;
+      border-bottom: 1px solid #dddddd;
+    }
+
+    td {
+      text-align: right;
+      padding-left: 50%;
+      position: relative;
+    }
+
+    td:before {
+      content: attr(data-label);
+      position: absolute;
+      left: 0;
+      width: 45%;
+      padding-left: 15px;
+      font-weight: bold;
+      text-align: left;
+    }
+  }
 
 
 </style>
 </head>
 <body>
+  <button class="collapsible">Find The Largest Of Three Input Numbers</button>
+  <div class="content">
+    <pre><code>
+      #include &lt;stdio.h&gt;
 
-<button class="collapsible">C-Programming Basic Structure</button>
-<div class="content">
-  
-  <pre>
-   <code>
-    #include &lt;stdio.h&gt;
-  
-    int main() {
-       
-        return 0;
-    }
-
-
-
-    টিকাঃ
-    সি প্রোগ্রামিং ভাষায় ছোট হাতের (lowercase) অক্ষর ব্যবহার করা একটি ভালো অভ্যাস বা উত্তম প্র্যাকটিস হিসেবে বিবেচিত হয়। বিশেষ করে ভেরিয়েবল নাম, ফাংশনের নাম, এবং অন্যান্য আইডেন্টিফায়ারগুলির ক্ষেত্রে ছোট হাতের অক্ষর ব্যবহার করলে কোড সহজে পড়া, বুঝা এবং রক্ষণাবেক্ষণ করা যায়।
-   </code>
-  </pre>
-</div>
-<button class="collapsible">Printf</button>
-<div class="content">
-  
-  <pre>
-   <code>
-    #include &lt;stdio.h&gt;
-   
-    int main() {
-      printf("Hello World");
-      printf("Hello \n World"); //Line Break
-       
-        return 0;
-    }
-   </code>
-  </pre>
-</div>
-<button class="collapsible">Declaration & Initialization</button>
-<div class="content">
-  
-  <pre>
-    <code>
-     #include &lt;stdio.h&gt;
-   
-     int main() {
-      int C;        //Declaration
-      C = 45;
-      int D = 9;    //Declaration & Initialization
-      int Y = 96;
-      char Y = 'F'; //Wrong Statement.
-      char y = 'F';
-      char y = "F"; //Wrong Statement. 
-      int product_price = 3000; //Use Camel Case, Snake Case and Pascal Case. 
-      int a,b,c;    // Declaring Multiple Variables of the Same Type.
-      char = '9';  //'9' is a character literal.
-
-      
+        int main() {
+            int num1, num2, num3;
         
-         return 0;
-     }
-
-     <h5>//Single line comment example <br>
-
-   /* This is a multi-line comment example */</h5>
-    </code>
-   </pre>
-   //Single line comment example 
-
-    /* This is a multi-line comment example */
-   
-</div>
-<button class="collapsible">Format-Specifier</button>
-<div class="content">
-  <h2 style="text-align: center;">Format Specifiers in C</h2>
-
-<table>
-    <tr>
-        <th>Data Type</th>
-        <th>Format Specifier</th>
-        <th>Description</th>
-    </tr>
-    <tr>
-        <td>Integer</td>
-        <td>%d</td>
-        <td>Prints an integer in decimal format.</td>
-    </tr>
-    <tr>
-        <td>Unsigned Integer</td>
-        <td>%u</td>
-        <td>Prints an unsigned integer.</td>
-    </tr>
-    <tr>
-        <td>Floating Point</td>
-        <td>%f</td>
-        <td>Prints a floating-point number.</td>
-    </tr>
-    <tr>
-        <td>Scientific Notation</td>
-        <td>%e</td>
-        <td>Prints a floating-point number in scientific notation.</td>
-    </tr>
-    <tr>
-        <td>Character</td>
-        <td>%c</td>
-        <td>Prints a single character.</td>
-    </tr>
-    <tr>
-        <td>String</td>
-        <td>%s</td>
-        <td>Prints a string of characters.</td>
-    </tr>
-    <tr>
-        <td>Octal Integer</td>
-        <td>%o</td>
-        <td>Prints an integer in octal format.</td>
-    </tr>
-    <tr>
-        <td>Hexadecimal Integer</td>
-        <td>%x / %X</td>
-        <td>Prints an integer in hexadecimal format. Use %X for uppercase letters.</td>
-    </tr>
-    <tr>
-        <td>Pointer</td>
-        <td>%p</td>
-        <td>Prints the address of a pointer.</td>
-    </tr>
-    <tr>
-        <td>Long Integer</td>
-        <td>%ld</td>
-        <td>Prints a long integer.</td>
-    </tr>
-    <tr>
-        <td>Short Integer</td>
-        <td>%hd</td>
-        <td>Prints a short integer.</td>
-    </tr>
-</table>
-
+            // Input three numbers
+            printf("Enter three numbers: ");
+            scanf("%d %d %d", &num1, &num2, &num3);
+        
+            // Check which one is the largest
+            if (num1 >= num2 && num1 >= num3) {
+                printf("The largest number is: %d\n", num1);
+            } else if (num2 >= num1 && num2 >= num3) {
+                printf("The largest number is: %d\n", num2);
+            } else {
+                printf("The largest number is: %d\n", num3);
+            }
+        
+            return 0;
+        }
+        
+        
+        
+    </code></pre>
+  </div>
+  <button class="collapsible">Ternary Operator</button>
+  <div class="content">
+    
+    <pre>
+     <code>
+      #include &lt;stdio.h&gt;
   
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">Format Specifiers Example</button>
+        int main() {
+            int a = 10;
+            int b = 20;
+        
+            // Using the ternary operator to find the maximum value
+            int max = (a > b) ? a : b;
+        
+            printf("The maximum value is: %d\n", max);
+        
+           
+        
+            return 0;
+        }
+
+        <hr><br><br><br>
+        আমরা If - Else ই ব্যবহার করব। <br> 
+        তবে  Ternary Operator দিয়েও একই কাজ করা যায়।
+     </code>
+    </pre>
+  </div>
+  <button class="collapsible">Loop In C</button>
 <div class="content">
   
   <pre>
    <code>
-    #include &lt;stdio.h&gt;
+    Loop Example
+    Loop Types = For/While/Do While <br>
+
+    For Loop Example 👇
+
+#include &lt;stdio.h&gt;  
+
+int main() 
+   { 
    
+    for(int i = 1; i <= 10; i++) 
+    {
+        
+        printf("I love Bangladesh \n");
+    }
+    
+    return 0;  
+}
+ 
+While Loop Example 👇
+
+
+#include &lt;stdio.h&gt;
+
+int main() {
+    int i = 1; 
+    while (i <= 10) 
+    { 
+        printf("I love Bangladesh \n"); 
+        i++; 
+    }
+
+    return 0; 
+}
+
+Do While Loop Example 👇
+
+#include &lt;stdio.h&gt;
+
+int main() {
+    int i = 1; 
+
+    do {
+        printf("I love Bangladesh \n"); 
+        i++; 
+       } 
+  while (i <= 10); 
+
+    return 0; 
+}
+
+
+
+    
+
+              <hr>
+একটি loop হল প্রোগ্রামিংয়ের একটি পদ্ধতি, যার মাধ্যমে কোনো কাজ বারবার সম্পন্ন করা যায় যতক্ষণ পর্যন্ত নির্দিষ্ট শর্ত (condition) পূরণ হয়।
+
+Loop এর প্রধান অংশসমূহ:
+
+1. Initialization (আরম্ভ): Loop শুরু করার পূর্বে কোনো ভ্যারিয়েবলের প্রাথমিক মান সেট করা হয়।
+
+
+2. Condition (শর্ত): প্রতিবার loop চলার সময় শর্ত পরীক্ষা করা হয়। যদি শর্ত সত্য (True) হয়, তাহলে loop চলতে থাকে। যদি মিথ্যা (False) হয়, তাহলে loop বন্ধ হয়ে যায়।
+
+
+3. Update (আপডেট): প্রতিবার loop এর প্রতিটি ধাপ সম্পন্ন হওয়ার পর ভ্যারিয়েবলের মান আপডেট করা হয়, যাতে loop ঠিকভাবে কাজ করতে পারে। <hr>
+
+a += 3 এর অর্থ "প্রতিবার লুপ চালানোর পরে a এর মানে ৩ যোগ করা।
+এর মানে a = 4 নয়, বরং 'a'র মান প্রতিবার ৩ করে বাড়বে। <br>
+অর্থাৎ, প্রথমে যদি a = 1 হয়, পরের বার তা ৪ হবে, তারপর ৭, তারপর ১০... 
+   </code>
+  </pre>
+  
+</div>
+<button class="collapsible">1,2,3,4,........n প্রদর্শন করো (Print)</button>
+<div class="content">
+  <pre><code>
+    
+    #include &lt;stdio.h&gt;
+    
     int main() {
+        int n; 
+    
+    
+        printf("Enter a positive integer: ");
+        scanf("%d", &n);
+    
+    
+        printf("The numbers from 1 to %d are:\n", n);
+        for (int i = 1; i <= n; i++) {
+            printf("%d ", i);
+        }
+        printf("\n");
+    
+        return 0;
+    }
+      
+  </code></pre>
+</div>
+<button class="collapsible">1+2+3+4+........+n প্রদর্শন করো (Print)</button>
+<div class="content">
+  <pre><code>
+   
+    #include &lt;stdio.h&gt;
+    
+    int main() {
+        int n; 
+    
+    
+        printf("Enter a positive integer: ");
+        scanf("%d", &n);
+    
+    
+        printf("The numbers from 1 to %d are:\n", n);
+        for (int i = 1; i <= n; i++) {
+            printf("%d ", i);
+        }
+        printf("\n");
+    
+        return 0;
+    }
+    
+  </code></pre>
+</div>
+<button class="collapsible">1+2+3+4+........+n যোগ করো। (Sum)</button>
+<div class="content">
+  <pre><code>
+    #include &lt;stdio.h&gt;
+    
+    int main() {
+        int n, sum = 0;
+    
+        printf("Enter a positive integer: ");
+        scanf("%d", &n);
+    
+    
+        for (int i = 1; i <= n; i++)
+        {
+            sum += i;
+        //printf("The sum of the first %d natural numbers is: %d\n", n, sum);
+        }
+        printf("The sum of the first %d natural numbers is: %d\n", n, sum);
+    
+    
+    
+        return 0;
+    }
+    
+  </code></pre>
+</div>
+<button class="collapsible">90<sup>2</sup>+80<sup>2</sup>+70<sup>2</sup>+.........+20<sup>2</sup></button>
+<div class="content">
+  <pre><code>
+    #include &lt;stdio.h&gt;
+
+      int main() {
+          int i;
+          int sum = 0;
+      
+          // Loop from 90 to 20, decrementing by 10 each time
+          for (i = 90; i >= 20; i = i - 10) {
+              sum = sum + (i * i);  // Add the square of i to the sum
+          }
+      
+          // Output the result
+          printf("The sum of the series is: %d\n", sum);
+      
+          return 0;
+      }
+      
+  </code></pre>
+</div>
+<button class="collapsible">Infinite Loop</button>
+<div class="content">
+  <pre><code>
+    #include &lt;stdio.h&gt;
+
+      int main() {
+      
+          for(;;)
+          {
+              printf("I Love You  \n");
+          }
+      
+          return 0;
+      }
+      
+    <hr>
+    #include &lt;stdio.h&gt;
+
+      int main() {
+      
+          for(int i = 100; i; i++) {
+              printf("%d\n", i);
+          }
+      
+          return 0;
+      } 
+      <hr>
+      #include &lt;stdio.h&gt;
+
+        int main() {
+            while(1) 
+            {
+                printf("This is an infinite loop!\n");
+            }
+        
+            return 0;
+        }
+        
+      
+  </code></pre>
+</div>
+<button class="collapsible">Infinite Loop Explain</button>
+<div class="content">
+  <pre><code>
+    একটি  infinite loop (অনন্ত লুপ) সাধারণত CPU এবং প্রোগ্রামের execution time-এর ওপর নির্ভর করে চলতে থাকে, কিন্তু এটি সরাসরি মেমোরি পূর্ণ করার সঙ্গে সম্পর্কিত নয়, যদি না লুপের ভেতরে এমন কোনো কোড থাকে যা মেমোরির অতিরিক্ত ব্যবহার করে।
+
+যদি আপনার লুপ মেমোরির ব্যবহার বাড়ায় (যেমন প্রতিবার নতুন ডাটা মেমোরিতে সংরক্ষণ করে), তবে মেমোরি পূর্ণ হতে পারে। মেমোরি শেষ হয়ে গেলে নিম্নলিখিত বিষয়গুলো ঘটতে পারে:
+
+1. Out of Memory Error:
+   Stack Overflow বা Heap Exhaustion: যদি লুপের ভেতরে ক্রমাগত মেমোরি allocation (যেমন `malloc` বা ডাইনামিক মেমোরি allocation) করা হয় এবং তা release (free) না করা হয়, তাহলে মেমোরি শেষ হয়ে যেতে পারে। এই ক্ষেত্রে, প্রোগ্রাম একটি **out of memory error বা segmentation fault এর মতো সমস্যা ফেলতে পারে এবং হঠাৎ বন্ধ হয়ে যাবে।
+   
+   উদাহরণ:
+
+   #include &lt;stdio.h&gt;
+   #include &lt;stdlib.h.&gt;
+
+   int main() {
+       while(1) {  // Infinite loop
+           int *ptr = (int *)malloc(1000000 * sizeof(int));  // Allocating memory in each iteration
+           if(ptr == NULL) {
+               printf("Memory allocation failed\n");
+               break;  // Break the loop if memory allocation fails
+           }
+       }
+
+       return 0;
+   }
+
+
+   এখানে লুপের প্রতিটি iteration-এ মেমোরি বরাদ্দ করা হচ্ছে, এবং যদি মেমোরি allocation ব্যর্থ হয়, তাহলে এটি একটি error বার্তা দেবে এবং লুপ থেকে বের হবে।
+
+2.System Crash:
+   - যদি প্রোগ্রাম খুব বেশি মেমোরি গ্রহণ করে এবং আপনার সিস্টেমের সমস্ত RAM এবং swap space (ভার্চুয়াল মেমোরি) পূর্ণ হয়ে যায়, তাহলে প্রোগ্রাম ছাড়াও পুরো সিস্টেমের পারফরম্যান্স ক্ষতিগ্রস্ত হতে পারে। কিছু ক্ষেত্রে, এটি  system crash বা freeze হতে পারে, বিশেষত কম মেমোরি বা কম রিসোর্সসম্পন্ন ডিভাইসে।
+
+3. Operating System Intervention:
+   - আধুনিক অপারেটিং সিস্টেমগুলোতে একটি out-of-memory (OOM) killer বা অনুরূপ মেকানিজম থাকে যা স্বয়ংক্রিয়ভাবে অতিরিক্ত মেমোরি গ্রহণকারী প্রোগ্রামগুলিকে বন্ধ করে দেয়। লিনাক্সের মতো অপারেটিং সিস্টেমে, OOM killer এমন প্রোগ্রাম বন্ধ করে দেয় যেগুলো খুব বেশি মেমোরি ব্যবহার করে, যাতে সিস্টেম অন্য প্রোগ্রাম চালাতে পারে।
+
+4. Slowing Down System Performance:
+   - মেমোরি full হয়ে গেলে সিস্টেমের স্বাভাবিক কার্যক্ষমতা ধীর হয়ে যেতে পারে কারণ অপারেটিং সিস্টেম ডিস্ক swap space ব্যবহার শুরু করে, যা RAM-এর তুলনায় অনেক ধীর গতির। এটি প্রোগ্রাম চালনার গতি অনেক কমিয়ে দেয় এবং প্রোগ্রামগুলো স্থবির হয়ে যেতে পারে।
+
+ কবে Infinite Loop সমস্যা সৃষ্টি করে:
+Static data বা constant printing-এর ক্ষেত্রে সাধারণত লুপ মেমোরি সমস্যা তৈরি করে না। যেমন:
+  
+  while(1) {
       printf("Hello World\n");
-      printf("Number 10+5\n");
-      printf("Number %d\n",5);
-      printf("Number %d\n",5+5);
-      printf("Number %d\n",5-3);
+  }
+  
+  এটি কেবল CPU ব্যবহার করবে কিন্তু মেমোরির জন্য সমস্যা তৈরি করবে না, কারণ এখানে নতুন কোনো মেমোরি বরাদ্দ বা ব্যবহৃত মেমোরি বৃদ্ধির মতো কাজ হচ্ছে না।
+  
+Dynamic memory allocation বা প্রোগ্রামে নতুন ডেটা তৈরি করা, যা মেমোরি থেকে সঠিকভাবে মুক্তি দেয়া হয় না (Memory leak), সেটি সমস্যার কারণ হতে পারে।
+
+ সমাধান:
+ -মেমোরি ব্যবহারের ক্ষেত্রে যত্নশীল হওয়া উচিত এবং যদি মেমোরি বরাদ্দ করেন, তবে সেটি মুক্ত (free) করতে ভুলবেন না।
+- ডিবাগিং টুল (যেমন Valgrind) ব্যবহার করতে পারেন মেমোরি লিক চেক করার জন্য।
+  </code></pre>
+</div>
+<button class="collapsible">Break & Continue Statement</button>
+<div class="content">
+  <pre><code>
+   
+
+1.Break Statement Example:
+
+The `break` statement is used to exit a loop immediately when a certain condition is met.
+
+Example: Break in a For Loop
+
+
+#include &lt;stdio.h&gt;
+
+int main() {
+    // Loop from 1 to 10
+    for(int i = 1; i <= 10; i++) 
+      {
+        // If i is 5, break the loop
+        if(i == 5) 
+        {
+            break;
+        }
+        printf("%d\n", i);
+    }
+
+    return 0;
+}
+
+
+Explanation:
+- This loop prints numbers from 1 to 10.
+- When `i` reaches 5, the `break` statement is executed, and the loop stops.
+- So, the output will only include the numbers 1 to 4.
+
+Output:
+
+1
+2
+3
+4
+
+
+2. Continue Statement Example:
+
+The `continue` statement skips the current iteration of the loop and moves to the next iteration.
+
+Example: Continue in a For Loop
+
+#include &lt;stdio.h&gt;
+
+int main() {
+    // Loop from 1 to 10
+    for(int i = 1; i <= 10; i++) 
+      {
+        // If i is 5, skip this iteration
+        if(i == 5) 
+        {
+            continue;
+        }
+        printf("%d\n", i);
+    }
+
+    return 0;
+}
+
+
+Explanation:
+- This loop prints numbers from 1 to 10.
+- When `i` equals 5, the `continue` statement is executed, and the loop skips printing `5` but continues with the next numbers.
+- So, the number 5 is skipped in the output.
+
+Output:
+
+1
+2
+3
+4
+6
+7
+8
+9
+10
+
+Summary:
+- `break`: Exits the loop entirely.
+- `continue`: Skips the current iteration (পুনরাবৃত্তি)  and continues with the next one.
+
+These examples demonstrate (প্রদর্শন করে) how you can control the flow of loops in C using the `break` and `continue` statements.      
+  </code></pre>
+</div>
+<button class="collapsible">Function In C (Example 1)</button>
+<div class="content">
+  <pre><code>
+    #include &lt;stdio.h&gt;
+
+      int Rokib() 
+      {
+          return 5;
+      }
       
-      printf("Number %d\n",5*5);
-      printf("Number %d\n",5/5);
+      int main() {
+          int z = Rokib();  // Call the function and assign its return value to 'z'
+          printf("%d\n", z);   // Output the value of 'z', which is 5
       
-      printf("Number %f\n",5 + 2.5); //Float By Default 6 Digits Value.
-      printf("Number %.2f\n",5 + 2.5); //Float By Custom.
-      printf("Number %lf\n",7 + 2.5); // Double By Default 6 Digits Value. 
-      printf("Number %.3lf\n",7 + 2.5); //Float By Custom.
+          return 0;
+      }
       
-      printf("Letter %c\n",M);     //Wrong Statement
-      printf("Letter %c\n", 'M');  //Right Statement
+  </code></pre>
+</div>
+<button class="collapsible">Function In C (Example 2)</button>
+<div class="content">
+  <pre><code>
+    #include &lt;stdio.h&gt;
+      // Function to print "Hello World"
+      void pri() 
+      {
+          printf("Hello World\n");  // Print the message
+      }
       
+      int main() {
+          print();  // Call the function to print the message
+          return 0;
+      }
       
-      টিকা:
-      সি প্রোগ্রামিং ভাষায় ভেরিয়েবল নামের ক্ষেত্রে কোটেশন (' ' বা " ") ব্যবহার করা হয় না। তবে, যখন কোনো ভ্যালু বা মান নির্ধারণ করা হয়, তখন নির্দিষ্ট ধরনের ভ্যালুর ক্ষেত্রে কোটেশন ব্যবহার করা হয়।
-  Note:
-In printf: %f and %lf both work for double.
-In scanf: Use %lf for double and %f for float.
-       
+  </code></pre>
+</div>
+<button class="collapsible">Function In C (Example 2)</button>
+<div class="content">
+  <pre><code>
+    #include &lt;stdio.h&gt;
+
+      // Function to add two numbers
+      int add(int a, int b) {
+          return a + b;  // Return the sum of a and b
+      }
+      
+      int main() {
+          int result = add(3, 5);  // Call the add function
+          printf("Sum: %d\n", result);  // Output the result
+          return 0;
+      }
+        
+  </code></pre>
+</div>
+<button class="collapsible">Void In C (Example-1)</button>
+<div class="content">
+  <pre><code>
+    C প্রোগ্রামিংয়ে `void` কীভাবে ব্যবহৃত হয় এবং কেন এটি গুরুত্বপূর্ণ।
+
+    1. `void` কি?
+    `void` একটি ডেটা টাইপ যা বোঝায় যে ফাংশনটি কোনো মান ফেরত (return) করবে না। এটি সাধারণত তখন ব্যবহার করা হয় যখন আপনি একটি ফাংশনের কার্যক্রম সম্পন্ন করার পরে কিছু ফলাফল প্রদান করতে চান না।
+    
+    2. `void` ব্যবহারের সুবিধা:
+    - স্পষ্টতা: যখন আপনি একটি ফাংশনকে `void` হিসাবে ঘোষণা করেন, এটি স্পষ্ট করে দেয় যে ফাংশনটি কোনো মান ফেরত দেবে না। উদাহরণস্বরূপ, একটি প্রিন্টিং ফাংশন সাধারণত কিছু ফেরত দেয় না, তাই `void` ব্যবহার করা উপযুক্ত।
+      
+    - সাধারণ কার্যক্রম: কিছু কার্যক্রম, যেমন স্ক্রীনে তথ্য প্রিন্ট করা বা একটি ফাইল খোলা, কোনো ফলাফল ফিরিয়ে আনতে প্রয়োজন নেই। তাই `void` ফাংশনগুলির জন্য সবচেয়ে উপযুক্ত।
+    
+    3. `void` ফাংশন উদাহরণ:
+    
+    #include &lt;stdio.h&gt;
+    
+    // একটি void ফাংশন যা "Hello World" প্রিন্ট করে
+    void printHelloWorld() {
+        printf("Hello World\n");
+    }
+    
+    int main() {
+        printHelloWorld();  // ফাংশন কল করা
         return 0;
     }
-   </code>
-  </pre>
+    
+    
+    ব্যাখ্যা:
+    - এখানে `printHelloWorld` ফাংশনটি `void` টাইপের। এটি স্ক্রীনে "Hello World" প্রিন্ট করে কিন্তু কিছু ফেরত দেয় না। তাই এর জন্য একটি রিটার্ন টাইপ হিসেবে `void` ব্যবহার করা হয়েছে।
+    
+    4.যখন `void` ব্যবহার করবেন না:
+    যদি আপনার ফাংশনটি কোনো মান ফেরত দেওয়ার প্রয়োজন হয়, তাহলে আপনাকে সেই মানের জন্য উপযুক্ত ডেটা টাইপ ব্যবহার করতে হবে। উদাহরণস্বরূপ, যদি আপনি দুটি সংখ্যা যোগ করতে চান এবং ফলাফল ফেরত দিতে চান, তাহলে আপনার ফাংশনের ডেটা টাইপটি `int` (বা অন্যান্য উপযুক্ত টাইপ) হতে হবে।
+    
+    উদাহরণ:
+    #include &lt;stdio.h&gt;
+    
+     একটি ফাংশন যা দুটি সংখ্যা যোগ করে এবং ফলাফল ফেরত দেয়
+    int add(int a, int b) {
+        return a + b;  // যোগফল ফেরত
+    }
+    
+    int main() {
+        int sum = add(5, 10);  // ফলাফল পেতে add ফাংশন কল করা
+        printf("Sum: %d\n", sum);  // যোগফল প্রিন্ট করা
+        return 0;
+    }
+    ```
+    
+    উপসংহার:
+    `void` ডেটা টাইপ ফাংশনগুলিকে স্পষ্ট করে যে তারা কোন মান ফেরত দিচ্ছে না, এবং এটি এমন কার্যক্রমের জন্য উপযুক্ত যেখানে কোন ফলাফলের প্রয়োজন নেই। এটি কোডের কার্যকারিতা এবং পড়া সহজ করে তোলে, কারণ এটি ফাংশনের উদ্দেশ্য ও কাজের ধরন সম্পর্কে পরিষ্কার ধারণা দেয়। 
+  </code></pre>
 </div>
-<button class="collapsible">Types of Operators in C</button>
+<button class="collapsible">Void In C (Example-2)</button>
 <div class="content">
-  
-  <pre>
+  <pre><code>
+    C প্রোগ্রামিংয়ে `void` এর পরিবর্তে `int` ব্যবহার করলে কিছু সমস্যা বা অসুবিধা হতে পারে। 
+
+    1. ফাংশনের উদ্দেশ্য পরিবর্তন
+    -`void`: যখন আপনি একটি ফাংশনকে `void` টাইপ হিসাবে ঘোষণা করেন, এটি বোঝায় যে ফাংশনটি কোনো মান ফেরত দেবে না। সাধারণত এটি তখন ব্যবহার করা হয় যখন আপনি একটি কার্যক্রম সম্পন্ন করতে চান (যেমন প্রিন্ট করা) কিন্তু কোনো ফলাফল ফেরত দেওয়ার প্রয়োজন নেই।
+    -`int`: যদি আপনি `int` ব্যবহার করেন, তাহলে ফাংশনটি একটি পূর্ণসংখ্যা ফেরত দেওয়ার প্রত্যাশা করে। এই ক্ষেত্রে, আপনাকে নিশ্চিত করতে হবে যে ফাংশনটির ভিতরে একটি `return` বিবৃতি রয়েছে যা একটি পূর্ণসংখ্যা মান ফেরত দেয়।
+    
+     2.কোডের স্পষ্টতা হ্রাস
+    - যখন আপনি একটি ফাংশনকে `int` হিসাবে ঘোষণা করেন কিন্তু এটি সত্যিকার অর্থে কিছু ফেরত দেয় না, তখন এটি কোডের স্পষ্টতা কমাতে পারে। পাঠক (বা আপনি নিজে) বুঝতে পারবে না যে ফাংশনটির উদ্দেশ্য কি। উদাহরণস্বরূপ:
+    #include &lt;stdio.h&gt;
+    
+    int printMessage() {
+        printf("Hello!\n");
+        return;  // এটি একটি ত্রুটি কারণ `return` এর সাথে কিছু নেই
+    }
+    
+    int main() {
+        printMessage();
+        return 0;
+    }
+    
+    এখানে `printMessage` ফাংশনটি `int` টাইপ, কিন্তু এটি `return` এর সাথে কিছু দেয় না, যা ত্রুটি তৈরি করবে।
+    
+    3. ফাংশনের ব্যহারের অপ্রয়োজনীয়তা
+    - `int` ব্যবহারের ফলে ফাংশনটির কাজের উদ্দেশ্যে একটি ফলাফল ফেরত দিতে হবে, যা প্রোগ্রামের কার্যকারিতা ও সংরক্ষণে কোন তাত্ত্বিক উদ্দেশ্য নেই। উদাহরণস্বরূপ:
+    
+    #include &lt;stdio.h&gt;
+    
+    int performCalculation() {
+        int a = 5;
+        int b = 10;
+        // শুধুমাত্র হিসাব করে কিছু ফেরত দিচ্ছে কিন্তু কার্যকরীভাবে ব্যবহৃত হচ্ছে না
+        return a + b;
+    }
+    
+    int main() {
+        performCalculation();  // কিন্তু ফলাফল ব্যবহার হচ্ছে না
+        return 0;
+    }
+    
+    
+    এখানে `performCalculation` ফাংশনটি একটি যোগফল ফেরত দেয়, কিন্তু `main` ফাংশনে তা ব্যবহার করা হচ্ছে না। এটি একটি অপ্রয়োজনীয় কাজের উদাহরণ।
+    
+     4.ফেরত মানের ব্যবহার
+    - যদি আপনি `int` ব্যবহার করেন, তবে আপনার তা ব্যবহার করতে হবে। যদি না করেন, তাহলে এটি "unused variable" এর মতো সতর্কতা তৈরি করতে পারে।
+    
+    5.অন্য কোডের সাথে সংযোগ
+    - যদি আপনার ফাংশনটি অন্য কোনো কোডের অংশে ব্যবহার হয়, যেখানে `void` প্রত্যাশিত ছিল, তাহলে `int` দেওয়ার ফলে ঐ কোডের সঙ্গে সমস্যা হতে পারে।
+    
+    উপসংহার
+    `void` এর পরিবর্তে `int` ব্যবহার করা আপনার ফাংশনের উদ্দেশ্যের উপর নির্ভর করে। যদি ফাংশনটির কোনো মান ফেরত দেওয়ার প্রয়োজন না থাকে, তবে `void` ব্যবহার করা উচিত। অন্যথায়, আপনি `int` ব্যবহার করলে তা সঠিকভাবে কাজ করবে যদি আপনি একটি পূর্ণসংখ্যা ফেরত দেওয়ার জন্য প্রস্তুত থাকেন এবং এটি ব্যবহৃত হয়। সতর্কতা হিসেবে মনে রাখবেন, প্রোগ্রামটির প্রয়োজনীয়তার ভিত্তিতে সঠিক ডেটা টাইপ ব্যবহার করা খুবই গুরুত্বপূর্ণ।
+  </code></pre>
+</div>
+<button class="collapsible">Void In C (Example-3)</button>
+<div class="content">
+  <pre><code>
+    আপনি যদি C প্রোগ্রামিংয়ে `void` এর পরিবর্তে `int` ব্যবহার করেন, তাহলে এর অর্থ হল ফাংশনটি একটি পূর্ণসংখ্যা মান ফেরত দেওয়ার প্রত্যাশা করে। এখানে এই পরিবর্তনের প্রভাব এবং কিছু উদাহরণসহ ব্যাখ্যা করা হলো:
+
+    1. `void` এর পরিবর্তে `int` ব্যবহার করা
+    
+    যখন আপনি একটি ফাংশন ঘোষণা করেন `int` টাইপ দিয়ে, তখন আপনাকে নিশ্চিত করতে হবে যে ফাংশনটি `return` বিবৃতি ব্যবহার করে একটি পূর্ণসংখ্যা মান ফেরত দেয়।
+    
+    উদাহরণ 1: প্রিন্টিং ফাংশনে `void` থেকে `int` পরিবর্তন
+    আসল `void` ফাংশন
+    #include &lt;stdio.h&gt;
+    
+    // "Hello World" প্রিন্ট করার জন্য ফাংশন
+    void printHelloWorld() {
+        printf("Hello World\n");
+    }
+    
+    int main() {
+        printHelloWorld();  // ফাংশন কল করা
+        return 0;
+    }
+    
+    
+    সংশোধিত `int` ফাংশন
+    
+    
+    #include &lt;stdio.h&gt;
+    
+    // "Hello World" প্রিন্ট করার জন্য ফাংশন এবং একটি পূর্ণসংখ্যা ফেরত দেয়
+    int printHelloWorld() {
+        printf("Hello World\n");
+        return 0;  // একটি পূর্ণসংখ্যা মান ফেরত
+    }
+    
+    int main() {
+        int result = printHelloWorld();  // ফাংশন কল করে এবং ফেরত দেওয়া মান সংগ্রহ করা
+        printf("ফাংশন ফেরত দিল: %d\n", result);  // ফেরত দেওয়া মান প্রিন্ট করা
+        return 0;
+    }
+    
+    
+    ব্যাখ্যা:
+    - সংশোধিত সংস্করণে, ফাংশন `printHelloWorld` এখন `int` টাইপের। 
+    - এটি "Hello World" স্ক্রীনে প্রিন্ট করে এবং তারপর `0` ফেরত দেয়।
+    - `main` ফাংশনে, আমরা `printHelloWorld()` কল করি এবং এর ফেরত দেওয়া মান `result` এ সংরক্ষণ করি, যা পরে প্রিন্ট করি।
+    
+    আউটপুট:
+    Hello World
+    ফাংশন ফেরত দিল: 0 
+  </code></pre>
+</div>
+
+<button class="collapsible">Array</button>
+<div class="content">
+  <pre><code>
+    সি (C) প্রোগ্রামিংয়ে array ব্যবহার করার মূল কারণ হলো, একই ধরনের অনেকগুলো ডেটা একসাথে সংরক্ষণ ও পরিচালনা করা সহজ করা। অ্যারে ব্যবহারের কিছু সুবিধা নিচে আলোচনা করা হলো:
+
+    অ্যারে ব্যবহারের কারণ:
+    1.একই ধরনের ডেটা সংরক্ষণ:** অ্যারে ব্যবহার করে একই ধরনের (যেমন ইন্টিজার, ফ্লোট, ক্যারেক্টার) অনেকগুলো ডেটা একত্রে সংরক্ষণ করা যায়। প্রতিটি ডেটার জন্য আলাদা আলাদা ভেরিয়েবল ঘোষণার পরিবর্তে একটি অ্যারে ব্যবহার করাই সহজ।
+       
+    2.ডেটা অ্যাক্সেস সহজ করা:** অ্যারে ব্যবহার করলে নির্দিষ্ট একটি ইনডেক্সের মাধ্যমে ডেটা সহজে অ্যাক্সেস করা যায়। যেমন, `numbers[0]`, `numbers[1]`, ইত্যাদি ব্যবহার করে অ্যারের প্রতিটি আইটেম অ্যাক্সেস করা যায়।
+    
+    3.ডেটার সিকোয়েন্সড স্টোরেজ:** অ্যারের মাধ্যমে ডেটা মেমোরিতে ধারাবাহিকভাবে সংরক্ষিত হয়, ফলে ডেটা অ্যাক্সেস ও ব্যবস্থাপনা দ্রুত এবং সহজ হয়।
+    
+    4.লুপ ব্যবহার করে পরিচালনা করা:** অ্যারের সাথে সহজে লুপ ব্যবহার করা যায়, যা প্রোগ্রামিংকে বেশি কার্যকর করে তোলে। যেমন, আপনি একটি `for` লুপ ব্যবহার করে পুরো অ্যারের উপাদানগুলোর উপর কাজ করতে পারেন।
+    
+    অ্যারে ব্যবহারের সুবিধা:
+    1.কম ভেরিয়েবলের ব্যবহার:** একাধিক ভেরিয়েবল ব্যবহারের পরিবর্তে একটি অ্যারে ব্যবহার করলে কোড সংক্ষিপ্ত ও পড়তে সহজ হয়।
+       
+    2.ডেটা ম্যানিপুলেশন সহজ:** অ্যারের উপাদানগুলো লুপ, শর্ত বা অন্যান্য গাণিতিক পদ্ধতি দিয়ে সহজেই ম্যানিপুলেট করা যায়।
+    
+    3.মেমোরি ব্যবহারে সাশ্রয়ী:** অ্যারে মেমোরিতে ধারাবাহিকভাবে সংরক্ষিত হয়, ফলে মেমোরি ব্যবহারের ক্ষেত্রে কার্যকরী হয়। অ্যারের প্রতিটি আইটেম ধারাবাহিকভাবে সংরক্ষিত হয়, তাই অ্যাক্সেস দ্রুত হয়।
+    
+    4.সহজতর গণনা ও অ্যালগরিদম:** অ্যারে ব্যবহার করে সহজেই ম্যাট্রিক্স অপারেশন, স্ট্যাক, কিউ ইত্যাদি ডেটা স্ট্রাকচার তৈরি করা যায়, যা বিভিন্ন অ্যালগরিদম ও সমস্যার সমাধানে সহায়ক হয়।
+    
+    উদাহরণ:
+    ধরা যাক, আপনার কাছে ১০ জন ছাত্রের নম্বর সংরক্ষণ করতে হবে। আপনি যদি অ্যারে ব্যবহার না করেন, তাহলে ১০টি ভেরিয়েবল ব্যবহার করতে হবে:
+    
+    
+    int student1, student2, ..., student10;
+    
+    
+    কিন্তু অ্যারে ব্যবহার করলে, আপনি একটি অ্যারেতেই সবগুলো নম্বর সংরক্ষণ করতে পারেন:
+    int marks[10];
+    
    
+    int marks[10];
     
-    <h1>Types of Operators in C</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>Category</th>
-                <th>Symbol</th>
-                <th>Description</th>
-                <th>Example</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Arithmetic Operators</td>
-                <td>+ , - , * , / , %</td>
-                <td>Used for basic mathematical operations: addition, subtraction, multiplication, division, and modulus.</td>
-                <td>a + b</td>
-            </tr>
-            <tr>
-                <td>Relational Operators</td>
-                <td>== , != , > , < , >= , <=</td>
-                <td>Used to compare two values. Returns true (1) or false (0).</td>
-                <td>a > b</td>
-            </tr>
-            <tr>
-                <td>Logical Operators</td>
-                <td>&& , || , !</td>
-                <td>Used for logical operations combining conditions.</td>
-                <td>a && b</td>
-            </tr>
-            <tr>
-                <td>Bitwise Operators</td>
-                <td>& , | , ^ , ~ , << , >></td>
-                <td>Operate on bits of integer values.</td>
-                <td>a & b</td>
-            </tr>
-            <tr>
-                <td>Assignment Operators</td>
-                <td>= , += , -= , *= , /= , %=</td>
-                <td>Used to assign values to variables.</td>
-                <td>a = b</td>
-            </tr>
-            <tr>
-                <td>Increment/Decrement Operators</td>
-                <td>++ , --</td>
-                <td>Used to increase or decrease a variable by 1.</td>
-                <td>a++</td>
-            </tr>
-            <tr>
-                <td>Ternary Operator</td>
-                <td>?:</td>
-                <td>A shorthand for if-else statements.</td>
-                <td>result = (a > b) ? a : b;</td>
-            </tr>
-            <tr>
-                <td>Sizeof Operator</td>
-                <td>sizeof</td>
-                <td>Returns the size (in bytes) of a variable or data type.</td>
-                <td>sizeof(int)</td>
-            </tr>
-            <tr>
-                <td>Pointer Operators</td>
-                <td>* , &</td>
-                <td>Used to work with pointers; & gets address, * dereferences.</td>
-                <td>int *p = &a;</td>
-            </tr>
-            <tr>
-                <td>Member Selection Operators</td>
-                <td>. , -></td>
-                <td>Access members of structures or unions.</td>
-                <td>ptr->member</td>
-            </tr>
-        </tbody>
-    </table>
-  </pre>
-</div>
-<button class="collapsible">Arithmetic Operators</button>
-<div class="content">
-  
-  <pre>
-  <code>
-    #include <stdio.h>
-
-      int main() {
-          int a = 10; // First operand
-          int b = 3;  // Second operand
-      
-          // Performing arithmetic operations
-          int sum = a + b;           // Addition
-          int difference = a - b;    // Subtraction
-          int product = a * b;       // Multiplication
-          int quotient = a / b;      // Division
-          int remainder = a % b;     // Modulus
-      
-          // Displaying the results
-          printf("Addition: %d + %d = %d\n", a, b, sum);
-          printf("Subtraction: %d - %d = %d\n", a, b, difference);
-          printf("Multiplication: %d * %d = %d\n", a, b, product);
-          printf("Division: %d / %d = %d\n", a, b, quotient);
-          printf("Modulus: %d %% %d = %d\n", a, b, remainder);
-      
-          return 0;
-      }
-      
-
-
-
-কেন C প্রোগ্রামিং-এ %% ব্যবহার হয় ?
-
-C প্রোগ্রামিং-এ %% ব্যবহার
-C প্রোগ্রামিং-এ, দুইটি শতাংশ চিহ্ন (%%) printf বিবৃতিতে একটি একক শতাংশ চিহ্ন (%) প্রদর্শন করার জন্য ব্যবহৃত হয়।
-এটি অবশিষ্টাংশ অপারেটরের সাথে সম্পর্কিত নয়, বরং printf ফাংশনের একটি ফরম্যাটিং বৈশিষ্ট্য।
-
-printf-এ %% ব্যবহার ব্যাখ্যা
-যখন আপনি আউটপুটে একটি শতাংশ চিহ্ন প্রদর্শন করতে চান,
-তখন আপনাকে এটি %% ব্যবহার করে স্কেপ করতে হয়। 
-এটি printf-কে জানায় যে এটি একটি অক্ষর হিসেবে বিবেচিত হবে, ফরম্যাট স্পেসিফায়ারের পরিবর্তে।
-
-  </code>
-  </pre>
-</div>
-<button class="collapsible">Assignment Operators</button>
-<div class="content">
-  
-  <pre>
-   <code>
-    #include <stdio.h>
-
-      int main() {
-          int a = 10; 
-          int b = 5; 
-      
-          // Using various assignment operators
-          a += b;  // a = a + b 
-          printf("After += : a = %d\n", a);
-          
-          a -= b;  // a = a - b 
-          printf("After -= : a = %d\n", a);
-          
-          a *= b;  // a = a * b
-          printf("After *= : a = %d\n", a);
-          
-          a /= b;  // a = a / b 
-          printf("After /= : a = %d\n", a);
-          
-          a %= b;  // a = a % b 
-          printf("After %%= : a = %d\n", a);
-      
-          return 0;
-      }
-      
-   </code>
-  </pre>
-</div>
-<button class="collapsible">Relational Operators</button>
-<div class="content">
-  
-  <pre>
-   <code>
-    #include <stdio.h>
-
-      int main() {
-          int a = 10; 
-          int b = 20; 
-      
-          
-          printf("a == b: %d\n", a == b);
-          printf("a != b: %d\n", a != b);   
-          printf("a > b: %d\n", a > b);     
-          printf("a < b: %d\n", a < b);   
-          printf("a >= b: %d\n", a >= b);   
-          printf("a <= b: %d\n", a <= b);  
-      
-          return 0;
-      }
-   </code>
-  </pre>
-</div>
-<button class="collapsible">Logical Operators</button>
-<div class="content">
-  
-  <pre>
-   <code>
     
-    #include <stdio.h>
+    এতে কোড অনেক বেশি সহজ এবং কার্যকর হয়। 
+  </code></pre>
+</div>
+<button class="collapsible">Array (Example-1)</button>
+<div class="content">
+  <pre><code>
+    #include &lt;stdio.h&gt;
+
       int main() {
-          int a = 1; // true (1)
-          int b = 0; // false (0)
       
+          int numbers[5];
+      
+          // Assign values to the array
+          numbers[0] = 10;
+          numbers[1] = 20;
+          numbers[2] = 30;
+          numbers[3] = 40;
+          numbers[4] = 50;
+      
+          // Print the values of the array
+          printf("Array elements are: %d \n",numbers[3]);
+      
+      
+      
+          return 0;
+      }
+      
+  </code></pre>
+</div>
+<button class="collapsible">Array (Example-2)</button>
+<div class="content">
+  <pre><code>
+    #include &lt;stdio.h&gt;
+
+      int main() {
+          // Declare an array of 5 integers
+          int numbers[5];
+      
+          // Assign values to the array
+          numbers[0] = 10;
+          numbers[1] = 20;
+          numbers[2] = 30;
+          numbers[3] = 40;
+          numbers[4] = 50;
+      
+          // Print the values of the array
+          printf("Array elements are:\n");
+          for(int i = 0; i < 5; i++) {
+              printf("%d\n", numbers[i]);
+          }
+      
+          return 0;
+      }
+       
+  </code></pre>
+</div>
+
+<!-- <button class="collapsible"></button>
+<div class="content">
+  <pre><code>
          
-          printf("a && b: %d\n", a && b);   // Logical AND
-          printf("a || b: %d\n", a || b);   // Logical OR
-          printf("!a: %d\n", !a);           // Logical NOT
-          printf("!b: %d\n", !b);           // Logical NOT
-      
-          return 0;
-      }
-      টিকাঃ ১ যেমন True তেমনি যেকোনো Positive Number True.
-      Example: int a = 5;
-      
-
-   </code>
-  </pre>
-</div>
-<button class="collapsible">Bitwise Operators</button>
-<div class="content">
-  
-  <pre>
-   <code>
-    Bitwise OR operation
-
-
-        #include <stdio.h>
-
-            int main() {
-                int a = 6;  // 6 in binary is 0110
-                int b = 3;  // 3 in binary is 0011
-                
-                int result = a | b;  // Bitwise OR operation
-            
-                printf("Result of a | b = %d\n", result);  // Should output 7 (0111 in binary)
-                
-                return 0;
-            }
-            
-    
-   
-    
-        
-Bitwise AND operation
-
-        #include <stdio.h>
-            int main() {
-                int a = 5;  // 5 in binary is 0101
-                int b = 3;  // 3 in binary is 0011
-                
-                int result = a & b;  // Bitwise AND operation
-            
-                printf("Result of a & b = %d\n", result);  // Should output 1 (0001 in binary)
-                
-                return 0;
-            }
-            
-    
-   
-   </code>
-  </pre>
-</div>
-<button class="collapsible">Ternary Operator</button>
-<div class="content">
-  
-  <pre>
-   <code>
-    #include <stdio.h>
-
-      int main() {
-          int a = 10;
-          int b = 20;
-      
-          // Using the ternary operator to find the maximum value
-          int max = (a > b) ? a : b;
-      
-          printf("The maximum value is: %d\n", max);
-      
-         
-      
-          return 0;
-      }
-      
-
-   </code>
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div>
-<button class="collapsible">?</button>
-<div class="content">
-  
-  <pre>
-   
-  </pre>
-</div> 
+  </code></pre>
+</div> -->
 
 
 <!-- <button class="collapsible"></button>
 <div class="content">
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-</div>
+</div> -->
 
 
 <script>
