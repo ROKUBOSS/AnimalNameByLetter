@@ -152,286 +152,603 @@
 </style>
 </head>
 <body>
-  <button class="collapsible">C-Programming Basic Structure</button>
-  <div class="content">
+  <button class="collapsible">Previous-Class</button>
+<div class="content">
+  <pre><code>
+   <li>int Sum = o; ? </li>
+   <li>Printf("");  For Loop Structure এর মধ্যে এবং বাহিরে ? </li>
+   <li>Sum += i; (Why This Used ?)</li>
+  </code></pre>
+</div>
+  <button class="collapsible">Array</button>
+<div class="content">
+  <pre><code>
     
-    <pre>
-     <code>
-      #include &lt;stdio.h&gt;
+*An array is a collection of variables of same types.
+*Data_Type Array_Name [Array_Size]
+
+*Data_Type = Int / Float / Double / Char
+*Keywords = Index / [] / {} / 
+*Array Index Always 0 দ্বারা শুরু হয়।
+
+<h4>Types Of Array</h4>
+*One Dimensional (1-D) Array / Linear Array
+Example: int numbers[5];
+*Multi Dimensional Arrays
+1-Two Dimensional (2-D) Arrays / Matrix Arrays
+Example: int numbers[5][10];
+2-Three Dimensional Arrays 
+Example: int numbers[5][10][20];
+
+<hr>
+
+  
+
+    সি (C) প্রোগ্রামিংয়ে array ব্যবহার করার মূল কারণ হলো, একই ধরনের অনেকগুলো ডেটা একসাথে সংরক্ষণ ও পরিচালনা করা সহজ করা। অ্যারে ব্যবহারের কিছু সুবিধা নিচে আলোচনা করা হলো:
+
+    অ্যারে ব্যবহারের কারণ:
+    1.একই ধরনের ডেটা সংরক্ষণ: অ্যারে ব্যবহার করে একই ধরনের (যেমন ইন্টিজার, ফ্লোট, ক্যারেক্টার) অনেকগুলো ডেটা একত্রে সংরক্ষণ করা যায়। প্রতিটি ডেটার জন্য আলাদা আলাদা ভেরিয়েবল ঘোষণার পরিবর্তে একটি অ্যারে ব্যবহার করাই সহজ।
+       
+    2.ডেটা অ্যাক্সেস সহজ করা: অ্যারে ব্যবহার করলে নির্দিষ্ট একটি ইনডেক্সের মাধ্যমে ডেটা সহজে অ্যাক্সেস করা যায়। যেমন, `numbers[0]`, `numbers[1]`, ইত্যাদি ব্যবহার করে অ্যারের প্রতিটি আইটেম অ্যাক্সেস করা যায়।
     
+    3.ডেটার সিকোয়েন্সড স্টোরেজ: অ্যারের মাধ্যমে ডেটা মেমোরিতে ধারাবাহিকভাবে সংরক্ষিত হয়, ফলে ডেটা অ্যাক্সেস ও ব্যবস্থাপনা দ্রুত এবং সহজ হয়।
+    
+    4.লুপ ব্যবহার করে পরিচালনা করা: অ্যারের সাথে সহজে লুপ ব্যবহার করা যায়, যা প্রোগ্রামিংকে বেশি কার্যকর করে তোলে। যেমন, আপনি একটি `for` লুপ ব্যবহার করে পুরো অ্যারের উপাদানগুলোর উপর কাজ করতে পারেন।
+    
+    অ্যারে ব্যবহারের সুবিধা:
+    1.কম ভেরিয়েবলের ব্যবহার: একাধিক ভেরিয়েবল ব্যবহারের পরিবর্তে একটি অ্যারে ব্যবহার করলে কোড সংক্ষিপ্ত ও পড়তে সহজ হয়।
+       
+    2.ডেটা ম্যানিপুলেশন সহজ: অ্যারের উপাদানগুলো লুপ, শর্ত বা অন্যান্য গাণিতিক পদ্ধতি দিয়ে সহজেই ম্যানিপুলেট করা যায়।
+    
+    3.মেমোরি ব্যবহারে সাশ্রয়ী: অ্যারে মেমোরিতে ধারাবাহিকভাবে সংরক্ষিত হয়, ফলে মেমোরি ব্যবহারের ক্ষেত্রে কার্যকরী হয়। অ্যারের প্রতিটি আইটেম ধারাবাহিকভাবে সংরক্ষিত হয়, তাই অ্যাক্সেস দ্রুত হয়।
+    
+    4.সহজতর গণনা ও অ্যালগরিদম: অ্যারে ব্যবহার করে সহজেই ম্যাট্রিক্স অপারেশন, স্ট্যাক, কিউ ইত্যাদি ডেটা স্ট্রাকচার তৈরি করা যায়, যা বিভিন্ন অ্যালগরিদম ও সমস্যার সমাধানে সহায়ক হয়।
+    
+    উদাহরণ:
+    ধরা যাক, আপনার কাছে ১০ জন ছাত্রের নম্বর সংরক্ষণ করতে হবে। আপনি যদি অ্যারে ব্যবহার না করেন, তাহলে ১০টি ভেরিয়েবল ব্যবহার করতে হবে:
+    
+    
+    int student1, student2, ..., student10;
+    
+    
+    কিন্তু অ্যারে ব্যবহার করলে, আপনি একটি অ্যারেতেই সবগুলো নম্বর সংরক্ষণ করতে পারেন:
+    int marks[10];
+    
+   
+    int marks[10];
+    
+    
+    এতে কোড অনেক বেশি সহজ এবং কার্যকর হয়। 
+  </code></pre>
+</div>
+<button class="collapsible">Array (Example-1)</button>
+<div class="content">
+  <pre><code>
+    #include &lt;stdio.h&gt;
+
       int main() {
-         
-          return 0;
-      }
-  
-  
-  
-      টিকাঃ
-      সি প্রোগ্রামিং ভাষায় ছোট হাতের (lowercase) অক্ষর ব্যবহার করা একটি ভালো অভ্যাস বা উত্তম প্র্যাকটিস হিসেবে বিবেচিত হয়। বিশেষ করে ভেরিয়েবল নাম, ফাংশনের নাম, এবং অন্যান্য আইডেন্টিফায়ারগুলির ক্ষেত্রে ছোট হাতের অক্ষর ব্যবহার করলে কোড সহজে পড়া, বুঝা এবং রক্ষণাবেক্ষণ করা যায়।
-     </code>
-    </pre>
-  </div>
-  <button class="collapsible">Printf</button>
-  <div class="content">
-    
-    <pre>
-     <code>
-      #include &lt;stdio.h&gt;
-     
-      int main() {
-        printf("Hello World");
-        printf("Hello \n World"); //Line Break
-         
-          return 0;
-      }
-     </code>
-    </pre>
-  </div>
-  <button class="collapsible">Declaration & Initialization</button>
-  <div class="content">
-    
-    <pre>
-      <code>
-       #include &lt;stdio.h&gt;
-     
-       int main() {
-        int C;        //Declaration
-        C = 45;
-        int D = 9;    //Declaration & Initialization
-        int Y = 96;
-        char Y = 'F'; //Wrong Statement.
-        char y = 'F';
-        char y = "F"; //Wrong Statement. 
-        int product_price = 3000; //Use Camel Case, Snake Case and Pascal Case. 
-        int a,b,c;    // Declaring Multiple Variables of the Same Type.
-        char = '9';  //'9' is a character literal.
-  
-        
+          //int numbers[] = {40, 35, 25, 55, 95};   //Perimeter না দিলেও Compiler বুঝবে।
+          int numbers[5];
+          numbers[0] = 40;  
+          numbers[1] = 35;  
+          numbers[2] = 25;  
+          numbers[3] = 55;  
+          numbers[4] = 95;  
           
-           return 0;
-       }
-  
-       <h5>//Single line comment example <br>
-  
-     /* This is a multi-line comment example */</h5>
-      </code>
-     </pre>
-     //Single line comment example 
-  
-      /* This is a multi-line comment example */
-     
-  </div>
-  <button class="collapsible">Format-Specifier</button>
-  <div class="content">
-    <h2 style="text-align: center;">Format Specifiers in C</h2>
-  
-  <table>
-      <tr>
-          <th>Data Type</th>
-          <th>Format Specifier</th>
-          <th>Description</th>
-      </tr>
-      <tr>
-          <td>Integer</td>
-          <td>%d</td>
-          <td>Prints an integer in decimal format.</td>
-      </tr>
-      <tr>
-          <td>Unsigned Integer</td>
-          <td>%u</td>
-          <td>Prints an unsigned integer.</td>
-      </tr>
-      <tr>
-          <td>Floating Point</td>
-          <td>%f</td>
-          <td>Prints a floating-point number.</td>
-      </tr>
-      <tr>
-          <td>Scientific Notation</td>
-          <td>%e</td>
-          <td>Prints a floating-point number in scientific notation.</td>
-      </tr>
-      <tr>
-          <td>Character</td>
-          <td>%c</td>
-          <td>Prints a single character.</td>
-      </tr>
-      <tr>
-          <td>String</td>
-          <td>%s</td>
-          <td>Prints a string of characters.</td>
-      </tr>
-      <tr>
-          <td>Octal Integer</td>
-          <td>%o</td>
-          <td>Prints an integer in octal format.</td>
-      </tr>
-      <tr>
-          <td>Hexadecimal Integer</td>
-          <td>%x / %X</td>
-          <td>Prints an integer in hexadecimal format. Use %X for uppercase letters.</td>
-      </tr>
-      <tr>
-          <td>Pointer</td>
-          <td>%p</td>
-          <td>Prints the address of a pointer.</td>
-      </tr>
-      <tr>
-          <td>Long Integer</td>
-          <td>%ld</td>
-          <td>Prints a long integer.</td>
-      </tr>
-      <tr>
-          <td>Short Integer</td>
-          <td>%hd</td>
-          <td>Prints a short integer.</td>
-      </tr>
-  </table>
-  
-    
-    <pre>
-     
-    </pre>
-  </div>
-  <button class="collapsible">Format Specifiers Example</button>
-  <div class="content">
-    
-    <pre>
-     <code>
-      #include &lt;stdio.h&gt;
-     
-      int main() {
-        printf("Hello World\n");
-        printf("Number 10+5\n");
-        printf("Number %d\n",5);
-        printf("Number %d\n",5+5);
-        printf("Number %d\n",5-3);
-        
-        printf("Number %d\n",5*5);
-        printf("Number %d\n",5/5);
-        
-        printf("Number %f\n",5 + 2.5); //Float By Default 6 Digits Value.
-        printf("Number %.2f\n",5 + 2.5); //Float By Custom.
-        printf("Number %lf\n",7 + 2.5); // Double By Default 6 Digits Value. 
-        printf("Number %.3lf\n",7 + 2.5); //Float By Custom.
-        
-        printf("Letter %c\n",M);     //Wrong Statement
-        printf("Letter %c\n", 'M');  //Right Statement
-        
-        
-        টিকা:
-        সি প্রোগ্রামিং ভাষায় ভেরিয়েবল নামের ক্ষেত্রে কোটেশন (' ' বা " ") ব্যবহার করা হয় না। তবে, যখন কোনো ভ্যালু বা মান নির্ধারণ করা হয়, তখন নির্দিষ্ট ধরনের ভ্যালুর ক্ষেত্রে কোটেশন ব্যবহার করা হয়।
-    Note:
-  In printf: %f and %lf both work for double.
-  In scanf: Use %lf for double and %f for float.
+          printf("%d",numbers[0]);
          
+      
           return 0;
       }
-     </code>
-    </pre>
-  </div>
-  <button class="collapsible">Types of Operators in C</button>
-  <div class="content">
-    
-    <pre>
-     
+      ---------------------------------------------------
       
-      <h1>Types of Operators in C</h1>
-      <table>
-          <thead>
-              <tr>
-                  <th>Category</th>
-                  <th>Symbol</th>
-                  <th>Description</th>
-                  <th>Example</th>
-              </tr>
-          </thead>
-          <tbody>
-              <tr>
-                  <td>Arithmetic Operators</td>
-                  <td>+ , - , * , / , %</td>
-                  <td>Used for basic mathematical operations: addition, subtraction, multiplication, division, and modulus.</td>
-                  <td>a + b</td>
-              </tr>
-              <tr>
-                  <td>Relational Operators</td>
-                  <td>== , != , > , < , >= , <=</td>
-                  <td>Used to compare two values. Returns true (1) or false (0).</td>
-                  <td>a > b</td>
-              </tr>
-              <tr>
-                  <td>Logical Operators</td>
-                  <td>&& , || , !</td>
-                  <td>Used for logical operations combining conditions.</td>
-                  <td>a && b</td>
-              </tr>
-              <tr>
-                  <td>Bitwise Operators</td>
-                  <td>& , | , ^ , ~ , << , >></td>
-                  <td>Operate on bits of integer values.</td>
-                  <td>a & b</td>
-              </tr>
-              <tr>
-                  <td>Assignment Operators</td>
-                  <td>= , += , -= , *= , /= , %=</td>
-                  <td>Used to assign values to variables.</td>
-                  <td>a = b</td>
-              </tr>
-              <tr>
-                  <td>Increment/Decrement Operators</td>
-                  <td>++ , --</td>
-                  <td>Used to increase or decrease a variable by 1.</td>
-                  <td>a++</td>
-              </tr>
-              <tr>
-                  <td>Ternary Operator</td>
-                  <td>?:</td>
-                  <td>A shorthand for if-else statements.</td>
-                  <td>result = (a > b) ? a : b;</td>
-              </tr>
-              <tr>
-                  <td>Sizeof Operator</td>
-                  <td>sizeof</td>
-                  <td>Returns the size (in bytes) of a variable or data type.</td>
-                  <td>sizeof(int)</td>
-              </tr>
-              <tr>
-                  <td>Pointer Operators</td>
-                  <td>* , &</td>
-                  <td>Used to work with pointers; & gets address, * dereferences.</td>
-                  <td>int *p = &a;</td>
-              </tr>
-              <tr>
-                  <td>Member Selection Operators</td>
-                  <td>. , -></td>
-                  <td>Access members of structures or unions.</td>
-                  <td>ptr->member</td>
-              </tr>
-          </tbody>
-      </table>
-    </pre>
-  </div>
-  <button class="collapsible">dsjfdf</button>
-  <div class="content">
+      #include &lt;stdio.h&gt;
+      
+      int main() {
+          //int numbers[] = {40, 35, 25, 55, 95};  
+          int numbers[5];
+          numbers[0] = 40;  
+          numbers[1] = 35;  
+          numbers[2] = 25;  
+          numbers[3] = 55;  
+          numbers[4] = 95;  
+          
+          for(int i = 0; i<=4; i++)
+          {
+            printf("%d",numbers[i]);  
+          }
+          
+          
+         
+      
+          return 0;
+      }
+      ---------------------------------------------------
+      
+      #include &lt;stdio.h&gt;
+      
+      int main() 
+      {
+        
+          int numbers[5] = {10,20,30,40,50};
+          printf("Enter a number");
+          scanf("%d",&numbers[3]);
+          printf("%d",numbers[3]);
+         
+      
+          return 0;
+      }
+      ---------------------------------------------------
+      
+      #include &lt;stdio.h&gt;
+      
+      int main()
+      {
+          int numbers[5];
+          printf("Enter 5 numbers:\n");
+      
+      
+          for (int i = 0; i <= 4; i++)
+          {
+              scanf("%d", &numbers[i]);  
+          }
+      
+          printf("You entered:\n");
+          
+          for (int i = 0; i < 5; i++)  
+              printf("%d ", numbers[i]); 
+          }
+      
+          return 0;
+      }
+      
+      <hr> 
+
+      কেন scanf() এ %d এর পরে স্পেস দেওয়া উচিত নয় ?
+      scanf() এর সাথে হোয়াইটস্পেসের ব্যবহার:
+      
+      %d ফরম্যাট স্পেসিফায়ার scanf() কে পূর্ণসংখ্যা ইনপুট আশা করতে বলে।
+      যদি আপনি %d এর পরে স্পেস দেন, যেমন: scanf("%d ", &numbers[i]);  এটি scanf()কে পূর্ণসংখ্যার পরে যেকোনো হোয়াইটস্পেস 
+      ক্যারেক্টার (স্পেস, ট্যাব, নিউলাইন) গ্রহণ করতে বলে।
+      এর মানে scanf() তখন পর্যন্ত অপেক্ষা করবে যতক্ষণ না এটি একটি নন-হোয়াইটস্পেস ক্যারেক্টার (বা নতুন ইনপুট) পায়। 
+      ফলে, প্রোগ্রামটি অপ্রত্যাশিতভাবে থেমে যেতে পারে।
+  </code></pre>
+</div>
+
+<button class="collapsible">String</button>
+<div class="content">
+  <pre><code>
+    #include <stdio.h>
+
+      int main()
+      {
+          char letters[6] = {'H', 'e', 'l', 'l', 'o', '\0'}; //Need a null character
+          // printf("%d\n",letters[1]); // If you uncomment this, it will print the ASCII value of 'e'
+          // printf("%c\n",letters[1]); // Uncomment to print the character 'e'
+          printf("%s\n",letters);  // This will now correctly print "Hello"
+      
+      char letters[50] = "Hello Afsan, 123$"; //প্রতিটি Space একটি Index হিসাবে গণ্য হবে।
+      
+          printf("%s\n",letters);  // This will now correctly print "Hello"
+      
+          return 0;
+      }
+      ----------------------------------------------------------------------
+      C ভাষায় স্ট্রিংগুলি অক্ষরের অ্যারের মাধ্যমে উপস্থাপিত হয় এবং প্রতিটি স্ট্রিং অবশ্যই একটি null character ('\0') দ্বারা শেষ হতে হবে। এটি NULL terminator হিসেবেও পরিচিত।
+      
+      কেন NULL Character প্রয়োজন?
+      স্ট্রিং এর শেষ চিহ্নিত করা:
+      
+      C ভাষায়, স্ট্রিংগুলি অক্ষরের একটি সিরিজ হিসাবে সংরক্ষিত হয়, এবং printf("%s") বা অন্যান্য স্ট্রিং ফাংশনগুলি জানেনা স্ট্রিং কখন শেষ হচ্ছে। NULL character-এর সাহায্যে, এই ফাংশনগুলি জানতে পারে কিভাবে অক্ষরের অ্যারে পড়তে হবে এবং কোথায় থামতে হবে।
+      Undefined Behavior এড়ানো:
+      
+      যদি NULL character না থাকে, তাহলে printf("%s", letters); প্রোগ্রামটি শেষ অক্ষরটি খুঁজে পাবে না এবং মেমোরির এলাকা পড়ে যেতে পারে যা স্ট্রিং-এর অংশ নয়। এর ফলে অপরিচিত বা ভুল তথ্য প্রদর্শিত হতে পারে, বা প্রোগ্রাম ক্র্যাশও হতে পারে।
+      ডেটা নিরাপত্তা:
+      
+      স্ট্রিংয়ের শেষ চিহ্নিত করতে NULL character ব্যবহার করার ফলে নিরাপত্তা আরও ভাল হয়, কারণ এটি নিশ্চিত করে যে স্ট্রিং-এর শেষ সীমা জানা যায় এবং স্ট্রিং-এর বাইরে তথ্য পড়ার চেষ্টা হয় না।
+      উদাহরণ
+      #include <stdio.h>
+      
+      int main() {
+          char letters[6] = {'H', 'e', 'l', 'l', 'o', '\0'}; // Null character added
+          printf("%s\n", letters);  // Correctly prints "Hello"
+      
+          return 0;
+      }
+      উপরের কোডে, letters অ্যারে-তে 'H', 'e', 'l', 'l', 'o', '\0' থাকে। যখন আমরা printf("%s", letters); ব্যবহার করি, এটি '\0' খুঁজে পায় এবং জানে যে স্ট্রিংটি এখানে শেষ।
+      
+      সারসংক্ষেপ
+      C ভাষায় স্ট্রিংগুলি কার্যকরভাবে ব্যবহারের জন্য NULL character অপরিহার্য। এটি স্ট্রিংয়ের শেষ চিহ্নিত করতে সহায়তা করে, যা প্রোগ্রামের সঠিক কার্যকারিতা এবং ডেটা নিরাপত্তা নিশ্চিত করে।
+      
+      
+      
+      
+      
+      
+  </code></pre>
+</div>
+<button class="collapsible">String (Example-1)</button>
+<div class="content">
+  <pre><code>
+    #include <stdio.h>
+
+      int main() {
+          char name[50];  // Declare a character array to hold the string
+      
+          // Prompt the user for input
+          printf("Enter your name: ");
+          
+          // Read the input string using scanf
+          scanf("%s", name);  // Note: %s format specifier is used for strings
+      
+          // Output the entered name
+          printf("Hello, %s!\n", name);
+      
+          return 0;
+      }
+      
+  </code></pre>
+</div>
+<button class="collapsible">String (Example-2)</button>
+<div class="content">
+  <pre><code>
+    #include <stdio.h>
+
+      int main() {
+          char name[50];  // Declare a character array to hold the string
+      
+      
+          printf("Enter your name: ");
+      
+      
+         //scanf("%s", name);  // Note: %s format specifier is used for strings
+      
+      
+          //printf("%s\n", name);
+          fgets(name, sizeof(name), stdin);
+          puts(name);
+      
+          return 0;
+      }
+      
+  </code></pre>
+</div>
+<button class="collapsible">String Explanation</button>
+<div class="content">
+  <pre><code>
+    স্ট্রিং-এর মধ্যে অক্ষর, সংখ্যা, প্রতীক, এবং স্থান—এসব কীভাবে থাকে, সেটি বোঝানোর জন্য নিচে কিছু ব্যাখ্যা দেওয়া হল:
+
+    ১. অক্ষর (Characters):
+   - স্ট্রিং একটি অক্ষরের ধারাবাহিকতা। এখানে অক্ষর বলতে A-Z, a-z, এবং অন্যান্য যেকোনো অক্ষর বোঝানো হচ্ছে। 
+   - উদাহরণ: `"Hello"` স্ট্রিংটির মধ্যে H, e, l, l, এবং o অক্ষরগুলি রয়েছে।
+   
+    ২. সংখ্যা (Numbers):
+   - স্ট্রিংয়ে সংখ্যা হিসাবে 0-9 পর্যন্ত যে কোনো ডিজিট থাকতে পারে। এটি সংখ্যার মত হলেও, এটি অক্ষর হিসেবে গণ্য হয়। 
+   - উদাহরণ: `"12345"` একটি স্ট্রিং যা সংখ্যার একটি ধারাবাহিকতা, কিন্তু এটি আসলে অক্ষরের একটি অ্যারে।
+   
+   ৩. প্রতীক (Symbols):
+   - স্ট্রিংয়ে বিশেষ চিহ্ন বা প্রতীকও থাকতে পারে, যেমন `!`, `@`, `#`, `$`, `%`, ইত্যাদি।
+   - উদাহরণ: `"Hello, World!"` স্ট্রিংটির মধ্যে একটি কমা `,` এবং একটি মার্ক `!` প্রতীক আছে।
+   
+    ৪. স্থান (Spaces):
+   - স্ট্রিংয়ের মধ্যে স্পেসও থাকতে পারে। এটি সাধারণত শব্দ আলাদা করতে ব্যবহৃত হয়। 
+   - উদাহরণ: `"Hello World"` এই স্ট্রিংটির মধ্যে একটি স্পেস আছে যা Hello এবং World কে আলাদা করে।
+   
+   সারসংক্ষেপ:
+   স্ট্রিং হলো অক্ষরের একটি ধারাবাহিকতা, যা অক্ষর, সংখ্যা, বিশেষ প্রতীক এবং স্থান—all of these can be included. স্ট্রিং হিসাবে কিছু লেখার জন্য এই সবই ব্যবহার করা হয়। C প্রোগ্রামিং ভাষায়, এগুলো সবই `char` ডেটা টাইপের মাধ্যমে সংরক্ষিত হয়। 
+   
+   উদাহরণ:
+   নিচের উদাহরণে বিভিন্ন উপাদান দেখানো হয়েছে:
+   char str1[] = "Hello";          // অক্ষর
+   char str2[] = "12345";          // সংখ্যা
+   char str3[] = "C Programming!"; // অক্ষর + প্রতীক
+   char str4[] = "Hello World";     // অক্ষর + স্থান
+   ```
+   
+   প্রতিটি স্ট্রিং ভিন্ন ভিন্ন তথ্য ধারণ করে, কিন্তু সবগুলোই অক্ষরের অ্যারেসহিতু।
+  </code></pre>
+</div>
+<button class="collapsible">Array Vs String</button>
+<div class="content">
+  <pre><code>
+    C প্রোগ্রামিং ভাষায় স্ট্রিং হল একটি বিশেষ প্রকার অ্যারে।
+    ----------------------------------------------------------------------
+    স্ট্রিংয়ের সংজ্ঞা:
+    স্ট্রিং হল অক্ষরের একটি ধারাবাহিকতা যা টেক্সট উপস্থাপন করে। প্রোগ্রামিং (যেমন C তে), একটি স্ট্রিং সাধারণত অক্ষরের একটি অ্যারে হিসেবে সংরক্ষিত হয়, যা একটি বিশেষ অক্ষর  null terminator (`'\0'`) দিয়ে শেষ হয়, যা নির্দেশ করে স্ট্রিংটি কোথায় শেষ হচ্ছে।
     
-    <pre>
-     xgfdg
-    </pre>
-  </div>
-  <button class="collapsible">?</button>
-  <div class="content">
+    উদাহরণ:
+    C তে `"Hello"` স্ট্রিংটি এমনভাবে উপস্থাপিত হয়: `{'H', 'e', 'l', 'l', 'o', '\0'}`।
     
-    <pre>
-     
-    </pre>
-  </div>
-  <button class="collapsible">?</button>
-  <div class="content">
+    মূল পয়েন্টসমূহ:
+    -অক্ষর: স্ট্রিংগুলিতে অক্ষর, সংখ্যা, প্রতীক এবং স্থান থাকতে পারে।
+    -Null Terminator: null terminator (`'\0'`) স্ট্রিংয়ের শেষ চিহ্নিত করে।
+    -ব্যবহার: স্ট্রিংগুলি টেক্সট ডেটা সংরক্ষণ এবং প্রক্রিয়া করার জন্য ব্যবহৃত হয়।
     
-    <pre>
-     
-    </pre>
-  </div>
+    এই সংজ্ঞাটি একটি স্ট্রিং কী, তার সহজ এবং স্পষ্ট একটি চিত্র তুলে ধরে।
+    ----------------------------------------------------------------------
+    C প্রোগ্রামিং এ array এবং string এর মধ্যে বিভিন্ন ধারণা রয়েছে, যদিও এটি বিশেষ করে অক্ষর তথ্যের ক্ষেত্রে খুব ঘনিষ্ঠভাবে সম্পর্কিত। এখানে পার্থক্যগুলোর বিস্তারিত আলোচনা করা হল:
+    
+    সংজ্ঞা
+    -Array (অ্যারে): একটি অ্যারে হল একই ধরনের উপাদানের একটি সংগ্রহ, যা ধারাবাহিক মেমোরি অবস্থানে সংরক্ষিত হয়। উপাদানগুলি যে কোনো ডেটা টাইপের (যেমন `int`, `float`, `char`, ইত্যাদি) হতে পারে।
+    - String (স্ট্রিং): C তে একটি স্ট্রিং হল একটি বিশেষ ধরনের অ্যারে যা অক্ষরের একটি ধারাবাহিকতা ধারণ করার জন্য বিশেষভাবে ডিজাইন করা হয়েছে। একটি স্ট্রিং হল মূলত `char` ডেটা টাইপের একটি অ্যারে যা একটি null character (`'\0'`) দ্বারা শেষ হয়।
+    
+    বৈশিষ্ট্য
+    1.ডেটা টাইপ:
+       - Array (অ্যারে): যে কোনো ডেটা টাইপের হতে পারে (যেমন `int`, `float`, `double`, `char`, ইত্যাদি)।
+       - String (স্ট্রিং): সর্বদা `char` ধরনের একটি অ্যারে।
+    
+    2.সমাপ্তি:
+       -Array (অ্যারে): ডেটার শেষ চিহ্নিত করার জন্য একটি নির্মিত প্রক্রিয়া নেই। আপনাকে অ্যারের আকার জানতেই হবে যাতে আপনি সীমার বাইরে পড়তে না যান।
+       - String (স্ট্রিং): সর্বদা একটি null character (`'\0'`) দ্বারা সমাপ্ত হয়, যা স্ট্রিং এর শেষ চিহ্নিত করতে সাহায্য করে। এটি ফাংশনগুলোকে জানাতে দেয় কোথায় স্ট্রিং শেষ হয়।
+    
+    3.প্রাথমিককরণ:
+       Array (অ্যারে): নির্দিষ্ট মান সহ প্রাথমিককরণ করা যেতে পারে বা পরে পূর্ণ করা যেতে পারে।
+  
+       int numbers[5] = {1, 2, 3, 4, 5};  // একটি পূর্ণসংখ্যার অ্যারে
+      
+       String (স্ট্রিং): স্ট্রিং লিটারেল ব্যবহার করে বা পৃথক অক্ষরগুলির মাধ্যমে প্রাথমিককরণ করা যেতে পারে।
+       char name[] = "Alice";   // স্বয়ংক্রিয়ভাবে null terminator যুক্ত হয়
+       char greeting[6] = {'H', 'e', 'l', 'l', 'o', '\0'}; // সুস্পষ্ট Null Terminator
+       
+    
+    4. আকার:
+       -Array (অ্যারে): অ্যারের আকার কম্পাইল সময়ে স্থির এবং রানটাইমে পরিবর্তন করা যায় না।
+       -String (স্ট্রিং): একটি স্ট্রিংয়ের আকার তার অক্ষরের সংখ্যা দ্বারা নির্ধারিত হয় এবং একটি null terminator এর জন্য এক যোগ করা হয়।
+    
+    উদাহরণ কোড
+    এখানে একটি অ্যারে এবং একটি স্ট্রিং এর উদাহরণ দেওয়া হল:
+  
+    #include &lt;stdio.h&gt;
+    
+    int main() {
+        // পূর্ণসংখ্যার অ্যারে
+        int numbers[5] = {1, 2, 3, 4, 5};  // একটি পূর্ণসংখ্যার অ্যারে
+        for (int i = 0; i < 5; i++) {
+            printf("%d ", numbers[i]); // আউটপুট: 1 2 3 4 5
+        }
+        printf("\n");
+    
+        // স্ট্রিং
+        char name[] = "Alice";  // একটি স্ট্রিং লিটারেল দিয়ে প্রাথমিককরণ
+        printf("%s\n", name);   // আউটপুট: Alice
+    
+        return 0;
+    }
+    
+    
+    পার্থক্যের সারসংক্ষেপ
+    | দিক          | Array (অ্যারে)                    | String (স্ট্রিং)                   |
+    |---------------|------------------------------------|------------------------------------|
+    | ডেটা টাইপ     | যে কোনো টাইপ                      | সর্বদা `char` টাইপ                |
+    | সমাপ্তি       | কোনো সমাপ্তি নেই                  | একটি null character `'\0'` দ্বারা শেষ হয়  |
+    | প্রাথমিককরণ   | যে কোনো মান দিয়ে প্রাথমিককরণ করা যায় | স্ট্রিং লিটারেল বা অক্ষরের মাধ্যমে প্রাথমিককরণ করা হয় |
+    | আকার          | স্থির আকার                         | আকার স্ট্রিং এর দৈর্ঘ্য + 1 (null এর জন্য) দ্বারা নির্ধারিত |
+    
+    সারসংক্ষেপে, যদিও স্ট্রিংগুলি প্রযুক্তিগতভাবে অক্ষরের অ্যারে, তাদের কিছু নির্দিষ্ট নিয়ম এবং প্রথা (যেমন null terminator) আছে যা তাদের সাধারণ অ্যারেগুলির থেকে আলাদা করে।
+  </code></pre>
+</div>
+
+<button class="collapsible">Function In C (Example 1)</button>
+<div class="content">
+  <pre><code>
+    #include &lt;stdio.h&gt;
+
+      int Rokib() 
+      {
+          return 5;
+      }
+      
+      int main() {
+          int z = Rokib();  // Call the function and assign its return value to 'z'
+          printf("%d\n", z);   // Output the value of 'z', which is 5
+      
+          return 0;
+      }
+      
+  </code></pre>
+</div>
+<button class="collapsible">Function In C (Example 2)</button>
+<div class="content">
+  <pre><code>
+    #include &lt;stdio.h&gt;
+      // Function to print "Hello World"
+      void pri() 
+      {
+          printf("Hello World\n");  // Print the message
+      }
+      
+      int main() {
+          print();  // Call the function to print the message
+          return 0;
+      }
+      
+  </code></pre>
+</div>
+<button class="collapsible">Function In C (Example 2)</button>
+<div class="content">
+  <pre><code>
+    #include &lt;stdio.h&gt;
+
+      // Function to add two numbers
+      int add(int a, int b) {
+          return a + b;  // Return the sum of a and b
+      }
+      
+      int main() {
+          int result = add(3, 5);  // Call the add function
+          printf("Sum: %d\n", result);  // Output the result
+          return 0;
+      }
+        
+  </code></pre>
+</div>
+<button class="collapsible">Void In C (Example-1)</button>
+<div class="content">
+  <pre><code>
+    C প্রোগ্রামিংয়ে `void` কীভাবে ব্যবহৃত হয় এবং কেন এটি গুরুত্বপূর্ণ।
+
+    1. `void` কি?
+    `void` একটি ডেটা টাইপ যা বোঝায় যে ফাংশনটি কোনো মান ফেরত (return) করবে না। এটি সাধারণত তখন ব্যবহার করা হয় যখন আপনি একটি ফাংশনের কার্যক্রম সম্পন্ন করার পরে কিছু ফলাফল প্রদান করতে চান না।
+    
+    2. `void` ব্যবহারের সুবিধা:
+    - স্পষ্টতা: যখন আপনি একটি ফাংশনকে `void` হিসাবে ঘোষণা করেন, এটি স্পষ্ট করে দেয় যে ফাংশনটি কোনো মান ফেরত দেবে না। উদাহরণস্বরূপ, একটি প্রিন্টিং ফাংশন সাধারণত কিছু ফেরত দেয় না, তাই `void` ব্যবহার করা উপযুক্ত।
+      
+    - সাধারণ কার্যক্রম: কিছু কার্যক্রম, যেমন স্ক্রীনে তথ্য প্রিন্ট করা বা একটি ফাইল খোলা, কোনো ফলাফল ফিরিয়ে আনতে প্রয়োজন নেই। তাই `void` ফাংশনগুলির জন্য সবচেয়ে উপযুক্ত।
+    
+    3. `void` ফাংশন উদাহরণ:
+    
+    #include &lt;stdio.h&gt;
+    
+    // একটি void ফাংশন যা "Hello World" প্রিন্ট করে
+    void printHelloWorld() {
+        printf("Hello World\n");
+    }
+    
+    int main() {
+        printHelloWorld();  // ফাংশন কল করা
+        return 0;
+    }
+    
+    
+    ব্যাখ্যা:
+    - এখানে `printHelloWorld` ফাংশনটি `void` টাইপের। এটি স্ক্রীনে "Hello World" প্রিন্ট করে কিন্তু কিছু ফেরত দেয় না। তাই এর জন্য একটি রিটার্ন টাইপ হিসেবে `void` ব্যবহার করা হয়েছে।
+    
+    4.যখন `void` ব্যবহার করবেন না:
+    যদি আপনার ফাংশনটি কোনো মান ফেরত দেওয়ার প্রয়োজন হয়, তাহলে আপনাকে সেই মানের জন্য উপযুক্ত ডেটা টাইপ ব্যবহার করতে হবে। উদাহরণস্বরূপ, যদি আপনি দুটি সংখ্যা যোগ করতে চান এবং ফলাফল ফেরত দিতে চান, তাহলে আপনার ফাংশনের ডেটা টাইপটি `int` (বা অন্যান্য উপযুক্ত টাইপ) হতে হবে।
+    
+    উদাহরণ:
+    #include &lt;stdio.h&gt;
+    
+     একটি ফাংশন যা দুটি সংখ্যা যোগ করে এবং ফলাফল ফেরত দেয়
+    int add(int a, int b) {
+        return a + b;  // যোগফল ফেরত
+    }
+    
+    int main() {
+        int sum = add(5, 10);  // ফলাফল পেতে add ফাংশন কল করা
+        printf("Sum: %d\n", sum);  // যোগফল প্রিন্ট করা
+        return 0;
+    }
+    ```
+    
+    উপসংহার:
+    `void` ডেটা টাইপ ফাংশনগুলিকে স্পষ্ট করে যে তারা কোন মান ফেরত দিচ্ছে না, এবং এটি এমন কার্যক্রমের জন্য উপযুক্ত যেখানে কোন ফলাফলের প্রয়োজন নেই। এটি কোডের কার্যকারিতা এবং পড়া সহজ করে তোলে, কারণ এটি ফাংশনের উদ্দেশ্য ও কাজের ধরন সম্পর্কে পরিষ্কার ধারণা দেয়। 
+  </code></pre>
+</div>
+<button class="collapsible">Void In C (Example-2)</button>
+<div class="content">
+  <pre><code>
+    C প্রোগ্রামিংয়ে `void` এর পরিবর্তে `int` ব্যবহার করলে কিছু সমস্যা বা অসুবিধা হতে পারে। 
+
+    1. ফাংশনের উদ্দেশ্য পরিবর্তন
+    -`void`: যখন আপনি একটি ফাংশনকে `void` টাইপ হিসাবে ঘোষণা করেন, এটি বোঝায় যে ফাংশনটি কোনো মান ফেরত দেবে না। সাধারণত এটি তখন ব্যবহার করা হয় যখন আপনি একটি কার্যক্রম সম্পন্ন করতে চান (যেমন প্রিন্ট করা) কিন্তু কোনো ফলাফল ফেরত দেওয়ার প্রয়োজন নেই।
+    -`int`: যদি আপনি `int` ব্যবহার করেন, তাহলে ফাংশনটি একটি পূর্ণসংখ্যা ফেরত দেওয়ার প্রত্যাশা করে। এই ক্ষেত্রে, আপনাকে নিশ্চিত করতে হবে যে ফাংশনটির ভিতরে একটি `return` বিবৃতি রয়েছে যা একটি পূর্ণসংখ্যা মান ফেরত দেয়।
+    
+     2.কোডের স্পষ্টতা হ্রাস
+    - যখন আপনি একটি ফাংশনকে `int` হিসাবে ঘোষণা করেন কিন্তু এটি সত্যিকার অর্থে কিছু ফেরত দেয় না, তখন এটি কোডের স্পষ্টতা কমাতে পারে। পাঠক (বা আপনি নিজে) বুঝতে পারবে না যে ফাংশনটির উদ্দেশ্য কি। উদাহরণস্বরূপ:
+    #include &lt;stdio.h&gt;
+    
+    int printMessage() {
+        printf("Hello!\n");
+        return;  // এটি একটি ত্রুটি কারণ `return` এর সাথে কিছু নেই
+    }
+    
+    int main() {
+        printMessage();
+        return 0;
+    }
+    
+    এখানে `printMessage` ফাংশনটি `int` টাইপ, কিন্তু এটি `return` এর সাথে কিছু দেয় না, যা ত্রুটি তৈরি করবে।
+    
+    3. ফাংশনের ব্যহারের অপ্রয়োজনীয়তা
+    - `int` ব্যবহারের ফলে ফাংশনটির কাজের উদ্দেশ্যে একটি ফলাফল ফেরত দিতে হবে, যা প্রোগ্রামের কার্যকারিতা ও সংরক্ষণে কোন তাত্ত্বিক উদ্দেশ্য নেই। উদাহরণস্বরূপ:
+    
+    #include &lt;stdio.h&gt;
+    
+    int performCalculation() {
+        int a = 5;
+        int b = 10;
+        // শুধুমাত্র হিসাব করে কিছু ফেরত দিচ্ছে কিন্তু কার্যকরীভাবে ব্যবহৃত হচ্ছে না
+        return a + b;
+    }
+    
+    int main() {
+        performCalculation();  // কিন্তু ফলাফল ব্যবহার হচ্ছে না
+        return 0;
+    }
+    
+    
+    এখানে `performCalculation` ফাংশনটি একটি যোগফল ফেরত দেয়, কিন্তু `main` ফাংশনে তা ব্যবহার করা হচ্ছে না। এটি একটি অপ্রয়োজনীয় কাজের উদাহরণ।
+    
+     4.ফেরত মানের ব্যবহার
+    - যদি আপনি `int` ব্যবহার করেন, তবে আপনার তা ব্যবহার করতে হবে। যদি না করেন, তাহলে এটি "unused variable" এর মতো সতর্কতা তৈরি করতে পারে।
+    
+    5.অন্য কোডের সাথে সংযোগ
+    - যদি আপনার ফাংশনটি অন্য কোনো কোডের অংশে ব্যবহার হয়, যেখানে `void` প্রত্যাশিত ছিল, তাহলে `int` দেওয়ার ফলে ঐ কোডের সঙ্গে সমস্যা হতে পারে।
+    
+    উপসংহার
+    `void` এর পরিবর্তে `int` ব্যবহার করা আপনার ফাংশনের উদ্দেশ্যের উপর নির্ভর করে। যদি ফাংশনটির কোনো মান ফেরত দেওয়ার প্রয়োজন না থাকে, তবে `void` ব্যবহার করা উচিত। অন্যথায়, আপনি `int` ব্যবহার করলে তা সঠিকভাবে কাজ করবে যদি আপনি একটি পূর্ণসংখ্যা ফেরত দেওয়ার জন্য প্রস্তুত থাকেন এবং এটি ব্যবহৃত হয়। সতর্কতা হিসেবে মনে রাখবেন, প্রোগ্রামটির প্রয়োজনীয়তার ভিত্তিতে সঠিক ডেটা টাইপ ব্যবহার করা খুবই গুরুত্বপূর্ণ।
+  </code></pre>
+</div>
+<button class="collapsible">Void In C (Example-3)</button>
+<div class="content">
+  <pre><code>
+    আপনি যদি C প্রোগ্রামিংয়ে `void` এর পরিবর্তে `int` ব্যবহার করেন, তাহলে এর অর্থ হল ফাংশনটি একটি পূর্ণসংখ্যা মান ফেরত দেওয়ার প্রত্যাশা করে। এখানে এই পরিবর্তনের প্রভাব এবং কিছু উদাহরণসহ ব্যাখ্যা করা হলো:
+
+    1. `void` এর পরিবর্তে `int` ব্যবহার করা
+    
+    যখন আপনি একটি ফাংশন ঘোষণা করেন `int` টাইপ দিয়ে, তখন আপনাকে নিশ্চিত করতে হবে যে ফাংশনটি `return` বিবৃতি ব্যবহার করে একটি পূর্ণসংখ্যা মান ফেরত দেয়।
+    
+    উদাহরণ 1: প্রিন্টিং ফাংশনে `void` থেকে `int` পরিবর্তন
+    আসল `void` ফাংশন
+    #include &lt;stdio.h&gt;
+    
+    // "Hello World" প্রিন্ট করার জন্য ফাংশন
+    void printHelloWorld() {
+        printf("Hello World\n");
+    }
+    
+    int main() {
+        printHelloWorld();  // ফাংশন কল করা
+        return 0;
+    }
+    
+    
+    সংশোধিত `int` ফাংশন
+    
+    
+    #include &lt;stdio.h&gt;
+    
+    // "Hello World" প্রিন্ট করার জন্য ফাংশন এবং একটি পূর্ণসংখ্যা ফেরত দেয়
+    int printHelloWorld() {
+        printf("Hello World\n");
+        return 0;  // একটি পূর্ণসংখ্যা মান ফেরত
+    }
+    
+    int main() {
+        int result = printHelloWorld();  // ফাংশন কল করে এবং ফেরত দেওয়া মান সংগ্রহ করা
+        printf("ফাংশন ফেরত দিল: %d\n", result);  // ফেরত দেওয়া মান প্রিন্ট করা
+        return 0;
+    }
+    
+    
+    ব্যাখ্যা:
+    - সংশোধিত সংস্করণে, ফাংশন `printHelloWorld` এখন `int` টাইপের। 
+    - এটি "Hello World" স্ক্রীনে প্রিন্ট করে এবং তারপর `0` ফেরত দেয়।
+    - `main` ফাংশনে, আমরা `printHelloWorld()` কল করি এবং এর ফেরত দেওয়া মান `result` এ সংরক্ষণ করি, যা পরে প্রিন্ট করি।
+    
+    আউটপুট:
+    Hello World
+    ফাংশন ফেরত দিল: 0 
+  </code></pre>
+</div>
+
+<!-- <button class="collapsible">Array (Example-2)</button>
+<div class="content">
+  <pre><code>
+   
+  </code></pre>
+</div> -->
 <!-- <button class="collapsible"></button>
 <div class="content">
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
